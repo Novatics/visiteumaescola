@@ -1,0 +1,29 @@
+development:
+  adapter: postgresql
+  database: rails_heroku_bootstrap_development
+  host: localhost
+  user: postgres
+  password:
+  pool: 5
+  timeout: 5000
+  template: template0
+
+test: &test
+  adapter: postgresql
+  database: rails_heroku_bootstrap_test
+  host: localhost
+  user: postgres
+  password:
+  pool: 5
+  timeout: 5000
+  template: template0
+
+production:
+  adapter: postgresql
+  database: rails_heroku_bootstrap_production
+  host: localhost
+  user: postgres
+  password:
+  pool: 5
+  timeout: 5000
+  template: template0

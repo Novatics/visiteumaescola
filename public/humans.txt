@@ -1,0 +1,61 @@
+   ___  ___                                    
+ /'___\/\_ \                                   
+/\ \__/\//\ \      __      ___ ___      __     
+\ \ ,__\ \ \ \   /'__`\  /' __` __`\  /'__`\   
+ \ \ \_/  \_\ \_/\ \L\.\_/\ \/\ \/\ \/\ \L\.\_ 
+  \ \_\   /\____\ \__/.\_\ \_\ \_\ \_\ \__/.\_\
+   \/_/   \/____/\/__/\/_/\/_/\/_/\/_/\/__/\/_/
+                                                                                        
+
+The humans.txt file explains the team, technology, and creative assets behind 
+this site.
+http://humanstxt.org
+
+_______________________________________________________________________________
+TEAM
+
+This site was hand-crafted by flama.me
+
+Site:      http://www.flama.me
+Twitter:   @studioFlama
+Location:  Brasília, DF, Brasil
+Email:     contato@flama.me
+
+Flavio Fonseca Alves
+Backend / Frontend Developer
+
+  github.com/flavioalves
+  twitter.com/flavioalves
+  fb.me/flavio.alves
+
+Michelle Protzek
+UI/UX Designer
+
+  github.com/miprotzek
+  twitter.com/miprotzek
+  fb.me/michelle.protzek
+
+_______________________________________________________________________________
+TECHNOLOGY
+
+Ruby on Rails
+http://rubyonrails.org
+
+HTML5 Boilerplate
+http://html5boilerplate.com
+
+Slim
+http://slim-lang.com
+
+Sass
+http://sass-lang.com
+
+Compass
+http://compass-style.org
+
+jQuery
+http://jquery.com
+
+Modernizr
+http://modernizr.com
+

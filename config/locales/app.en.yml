@@ -1,0 +1,26 @@
+en:
+  app:
+    lt_ie_9_warning:
+      You are using an <strong>outdated</strong> browser. 
+      Please <a href="http://browsehappy.com/">upgrade your browser</a> or 
+      <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.
+    active_admin:
+      administration: 'Administration'
+      content: 'Content'
+      reports: 'Reports'
+      welcome: 'Welcome to the Administration Panel!'
+      call_to_action: |
+        To edit or view elements of this application
+        please use the top navbar.
+    mercury:
+      edit_button: Editor
+    contacts:
+      leave_a_message: Leave us a message
+      email: Email
+      name: Name
+      message: Message
+      form_ready: Send
+      form_sending: Sending
+      form_sent: Sent
+      form_error: Error
+      form_warn: Fill In

@@ -1,0 +1,44 @@
+pt-BR:
+  activerecord:
+    models:
+      page: Página(s)
+      user: Usuário(s)
+      admin_user: Administrador(es)
+      content_block: Bloco(s) de Conteúdo
+      contact: Contato(s)
+    attributes:
+      contact:
+        name: Nome
+        email: Email
+        message: Mensagem
+        created_at: Criado em
+        updated_at: Atualizado em
+      content_block:
+        name: Nome
+        body: Conteúdo
+        created_at: Criado em
+        updated_at: Atualizado em
+      page:
+        title: Título
+        content: Conteúdo
+        created_at: Criado em
+        updated_at: Atualizado em
+      admin_user:
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da Senha
+        created_at: Criado em
+        updated_at: Atualizado em
+        current_sign_in_at: Loggado em
+        last_sign_in_at: Login anterior em
+        sign_in_count: Número de logins
+      user:
+        name: Nome
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da Senha
+        remember_me: Lembrar-me
+        created_at: Criado em
+        updated_at: Atualizado em
+        current_sign_in_at: Último login em
+        sign_in_count: No. de logins
