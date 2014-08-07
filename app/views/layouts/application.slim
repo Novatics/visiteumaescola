@@ -24,11 +24,6 @@ html.no-js lang="#{I18n.locale}"
   body class="#{yield :body_class}" data-development-grid="hide"
     == render 'layouts/header'
     section.page
-      - if notice.present?
-        .notice == notice
-      - if alert.present?
-        .alert == alert
-
       == yield
 
     == render 'layouts/footer'
