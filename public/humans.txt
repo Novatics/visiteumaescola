@@ -1,25 +1,26 @@
-   ___  ___                                    
- /'___\/\_ \                                   
-/\ \__/\//\ \      __      ___ ___      __     
-\ \ ,__\ \ \ \   /'__`\  /' __` __`\  /'__`\   
- \ \ \_/  \_\ \_/\ \L\.\_/\ \/\ \/\ \/\ \L\.\_ 
-  \ \_\   /\____\ \__/.\_\ \_\ \_\ \_\ \__/.\_\
-   \/_/   \/____/\/__/\/_/\/_/\/_/\/_/\/__/\/_/
-                                                                                        
+888b      88                                            88
+8888b     88                                      ,d    ""
+88 `8b    88                                      88
+88  `8b   88  ,adPPYba,  8b       d8 ,adPPYYba, MM88MMM 88  ,adPPYba, ,adPPYba,
+88   `8b  88 a8"     "8a `8b     d8' ""     `Y8   88    88 a8"     "" I8[    ""
+88    `8b 88 8b       d8  `8b   d8'  ,adPPPPP88   88    88 8b          `"Y8ba,
+88     `8888 "8a,   ,a8"   `8b,d8'   88,    ,88   88,   88 "8a,   ,aa aa    ]8I
+88      `888  `"YbbdP"'      "8"     `"8bbdP"Y8   "Y888 88  `"Ybbd8"' `"YbbdP"'
 
-The humans.txt file explains the team, technology, and creative assets behind 
+
+The humans.txt file explains the team, technology, and creative assets behind
 this site.
 http://humanstxt.org
 
 _______________________________________________________________________________
 TEAM
 
-This site was hand-crafted by flama.me
+This site was hand-crafted by Novatics
 
-Site:      http://www.flama.me
-Twitter:   @studioFlama
-Location:  Brasília, DF, Brasil
-Email:     contato@flama.me
+Site:      http://www.novatics.com.br
+Twitter:   @novatics
+Location:  Brasilia, DF, Brasil
+Email:     contato@novatics.com.br
 
 Flavio Fonseca Alves
 Backend / Frontend Developer
@@ -28,12 +29,11 @@ Backend / Frontend Developer
   twitter.com/flavioalves
   fb.me/flavio.alves
 
-Michelle Protzek
-UI/UX Designer
+Fabricio Buzeto
+Backend / Frontend Developer
 
-  github.com/miprotzek
-  twitter.com/miprotzek
-  fb.me/michelle.protzek
+  github.com/nukdf
+  twitter.com/nukdf
 
 _______________________________________________________________________________
 TECHNOLOGY
