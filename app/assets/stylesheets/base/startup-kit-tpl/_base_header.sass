@@ -1,0 +1,65 @@
+.navbar
+  left: 0
+  right: 0
+  .brand
+    padding: 23px 28px 24px 0
+    float: left
+  .subnav
+    display: none
+  a
+    -webkit-transition: color 0.25s, background 0.25s
+    -moz-transition: color 0.25s, background 0.25s
+    -o-transition: color 0.25s, background 0.25s
+    transition: color 0.25s, background 0.25s
+  .navbar-collapse
+    padding-left: 0
+    padding-right: 0
+  .nav > li
+    float: left
+    > a
+      &:hover, &:focus
+        background: none
+  .navbar-toggle
+    margin: 26px 0 10px
+    color: white
+    background: none
+    padding: 0
+    width: 30px
+    height: 30px
+    background: url("menu-icon.png") 50% no-repeat
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    border-radius: 0
+    &:before
+      display: none
+  .navbar-form .btn
+    height: auto
+    line-height: 22px
+    padding-top: 10px
+    padding-bottom: 10px
+  .nav > li > a > [class*="fui-"]
+    font-size: 24px
+    margin: -10px 0 0
+    position: relative
+    top: 4px
+  &.navbar-fixed-top
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    -o-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    max-width: 1170px
+    margin: 0 auto
+
+.loaded .navbar.navbar-fixed-top
+  -webkit-transition: all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1)
+  -moz-transition: all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1)
+  -o-transition: all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1)
+  transition: all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1)
+
+@media (min-width: 768px) and (max-width: 991px)
+  .navbar-collapse.collapse
+    display: none !important
+  .navbar-toggle
+    display: block
+  .navbar-header
+    float: none

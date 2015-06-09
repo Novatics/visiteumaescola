@@ -1,0 +1,111 @@
+.header-2
+  z-index: 100
+  left: 0
+  top: 0
+  width: 100%
+  padding-top: 0
+  padding-bottom: 0
+  > .container
+    position: relative
+  .navbar
+    position: absolute
+    z-index: 2
+    top: 55px
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    &.navbar-fixed-top
+      position: fixed
+    .brand
+      font-size: 25px
+      font-weight: normal
+      color: #ffffff
+      font-weight: 800
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+      img:first-child
+        float: left
+        margin: -10px 15px 0 0
+    .nav > li
+      margin-left: 35px
+      &:first-child
+        margin-left: 0
+      > a
+        padding: 32px 0 30px
+        font-size: 17px
+        font-weight: normal
+        font-weight: 500
+        letter-spacing: 1px
+        color: #ffffff
+        &:hover, &:focus, &.active
+          color: #506e8c
+      &.active > a
+        color: #506e8c
+        &:hover, &:focus, &.active
+          color: #405870
+
+.header-2-sub
+  z-index: 50
+  left: 0
+  width: 100%
+  position: relative
+  padding-top: 215px
+  padding-bottom: 115px
+  color: white
+  text-align: center
+  .hero-unit
+    margin: 0
+    padding: 0
+    background: transparent
+    h1
+      margin: 0 0 18px
+      font-size: 30px
+      font-weight: normal
+      color: #ffffff
+      font-weight: 300
+      line-height: 40px
+    p
+      font-size: 13px
+      font-weight: normal
+      color: #506e8c
+      font-weight: 800
+      letter-spacing: 2px
+  .btns
+    display: inline-block
+    margin-top: 15px
+    .btn
+      min-width: 160px
+      float: left
+      + .btn
+        margin-left: 20px
+  .btn
+    &.btn-inverse
+      background-color: #3c556e
+      &:hover, &:focus
+        background-color: #63778b
+      &:active, &.active
+        background-color: #33485e
+    &.btn-danger
+      background-color: #c0392b
+      &:hover, &:focus
+        background-color: #cd6155
+      &:active, &.active
+        background-color: #a33025
+
+@media (max-width: 991px)
+  .header-2-sub
+    padding-top: 165px
+
+@media (max-width: 480px)
+  .header-2-sub .btns
+    margin-top: 48px
+    display: block
+
+@media (max-width: 480px)
+  .header-2-sub .btns .btn
+    float: none
+    display: block
+    margin-top: 10px
+    &:first-child
+      margin-top: 0
+
+@media (max-width: 480px)
+  .header-2-sub .btns .btn + .btn
+    margin-left: 0

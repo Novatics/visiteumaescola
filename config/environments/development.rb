@@ -7,7 +7,7 @@ VisiteUmaEscola::Application.configure do
   config.active_support.deprecation = :log
   config.logger = Logger.new(STDOUT)
   config.logger.level = Logger.const_get ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'DEBUG'
-  #config.whiny_nils = true  
+  #config.whiny_nils = true
   #config.action_dispatch.best_standards_support = :builtin
   #config.active_record.mass_assignment_sanitizer = :strict
   #config.active_record.auto_explain_threshold_in_seconds = 0.5
@@ -19,9 +19,9 @@ VisiteUmaEscola::Application.configure do
 
   Slim::Engine.set_default_options pretty: true
   Slim::Engine.set_default_options format: :html5
-  
+
   # Automatically inject JavaScript needed for LiveReload
-  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+  #config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 
   config.after_initialize do
     Bullet.enable = true

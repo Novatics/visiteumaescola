@@ -1,0 +1,73 @@
+.footer-3
+  font-size: 14px
+  padding-top: 65px
+  padding-bottom: 65px
+  background: #2c3e50
+  color: #bdc3c7
+  &.v-center, .v-center
+    display: table
+    width: 100%
+  &.v-center > div, .v-center > div
+    display: table-cell
+    vertical-align: middle
+    margin-top: 0
+    margin-bottom: 0
+    float: none
+  .row.v-center
+    padding-left: 0
+    padding-right: 0
+  a
+    color: #ffffff
+    font-weight: normal
+    &:hover, &:focus, &.active
+      color: #bdc3c7
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+    color: white
+  .brand
+    font-size: 25px
+    font-weight: normal
+    color: #ffffff
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 500
+  .additional-links a
+    color: #bdc3c7
+    text-decoration: underline
+    &:hover, &:focus, &.active
+      color: #ffffff
+  h6
+    margin: 0 0 10px
+    font-size: 16px
+    font-weight: normal
+    color: #ffffff
+    font-weight: 300
+    text-transform: none
+  .address
+    line-height: 1.6
+
+@media (min-width: 768px)
+  .footer-3
+    &.v-center.row:before, .v-center.row:before, &.v-center.row:after, .v-center.row:after
+      display: none
+
+@media (max-width: 767px)
+  .footer-3
+    &.v-center, .v-center
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      padding-left: 5px
+      padding-right: 5px
+    &.v-center.row, .v-center.row
+      display: block
+      width: auto
+    &.v-center.row:before, .v-center.row:before, &.v-center.row:after, .v-center.row:after
+      display: none
+    &.v-center.row > *, .v-center.row > *
+      display: block
+      vertical-align: baseline
+
+@media (max-width: 767px)
+  .footer-3 .row > [class*="col-sm-"]
+    margin-top: 30px
+    &:first-child
+      margin-top: 0

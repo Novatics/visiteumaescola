@@ -1,0 +1,194 @@
+.header-10
+  z-index: 100
+  width: 100%
+  padding-top: 0
+  padding-bottom: 0
+  height: 80px
+  color: white
+  .header-background
+    background: #1b1f23
+  .navbar
+    position: absolute
+    z-index: 2
+    top: 0
+    margin: 0
+    &.navbar-fixed-top
+      top: 0 !important
+    .brand
+      padding-top: 25px
+      font-size: 25px
+      font-weight: normal
+      color: #ffffff
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-weight: 800
+      img:first-child
+        float: left
+        margin: -10px 15px 0 0
+    .nav > li
+      margin-left: 40px
+      &:first-child
+        margin-left: 0
+      > a
+        padding: 29px 0 27px
+        font-size: 17px
+        font-weight: normal
+        color: #7f8c8d
+        font-weight: 500
+        letter-spacing: 1px
+        color: #ffffff
+        &:hover, &:focus, &.active
+          color: #bdc3c7
+      &.active > a
+        color: #bdc3c7
+        &:hover, &:focus, &.active
+          color: #bdc3c7
+    .navbar-form
+      padding: 19px 0 19px 50px
+    .btn
+      padding-left: 26px
+      padding-right: 26px
+      &.btn-success
+        font-size: 15px
+        font-weight: normal
+        color: #ffffff
+        font-weight: 500
+    .navbar-toggle
+      margin-top: 30px
+
+.header-10-sub
+  position: relative
+  z-index: 50
+  height: 800px
+  background-color: #1b1f23
+  color: white
+  text-align: center
+  &.v-center, .v-center
+    display: table
+    width: 100%
+  &.v-center > div, .v-center > div
+    display: table-cell
+    vertical-align: middle
+    margin-top: 0
+    margin-bottom: 0
+    float: none
+  .background
+    background-image: url('criancas-1.jpg')
+    opacity: 20
+    filter: alpha(opacity = 2000)
+    opacity: 0.2
+    filter: alpha(opacity = 20)
+  .hero-unit
+    padding: 0
+    margin: 0
+    background-color: transparent
+    h1
+      margin: 0 0 30px
+      font-size: 45px
+      font-weight: normal
+      color: #ffffff
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-weight: 300
+    p
+      font-size: 25px
+      font-weight: normal
+      color: #bdc3c7
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-weight: 300
+      line-height: 37.5px
+    &.hero-unit-bordered h1
+      font-size: 46px
+      font-weight: normal
+      color: #ffffff
+      font-weight: 500
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+      border: 8px solid white
+      display: inline-block
+      margin: 0
+      padding: 30px 40px
+
+  .control-btn
+    width: 53px
+    height: 53px
+    line-height: 53px
+    margin: 0
+    padding: 0
+    border-radius: 50%
+    text-align: center
+    font-size: 19px
+    font-weight: normal
+    color: #7f8c8d
+    color: #ffffff
+    background: #121518
+    opacity: 80
+    filter: alpha(opacity = 8000)
+    opacity: 0.8
+    filter: alpha(opacity = 80)
+    position: absolute
+    left: 50%
+    bottom: 90px
+    margin-left: -26.5px
+    &:hover, &:focus, &.active
+      color: #ffffff
+    &:hover, &:focus, &:active, &.active
+      opacity: 100
+      filter: alpha(opacity = 10000)
+      opacity: 1
+      filter: alpha(opacity = 100)
+
+p.head
+  width: 60%
+  margin-left: auto
+  margin-right: auto
+
+@media (min-width: 768px)
+  .header-10-sub
+    &.v-center.row:before, .v-center.row:before, &.v-center.row:after, .v-center.row:after
+      display: none
+
+@media (max-width: 767px)
+  .header-10-sub
+    &.v-center, .v-center
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      padding-left: 5px
+      padding-right: 5px
+    &.v-center.row, .v-center.row
+      display: block
+      width: auto
+    &.v-center.row:before, .v-center.row:before, &.v-center.row:after, .v-center.row:after
+      display: none
+    &.v-center.row > *, .v-center.row > *
+      display: block
+      vertical-align: baseline
+
+@media (max-width: 480px)
+  .header-10-sub .hero-unit
+    h1
+      font-size: 36px
+      font-weight: normal
+      color: #ffffff
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-weight: 300
+    p
+      font-size: 22px
+      font-weight: normal
+      color: #bdc3c7
+      line-height: 35px
+      font-weight: 300
+
+@media (max-width: 480px)
+  .header-10-sub .hero-unit.hero-unit-bordered h1
+    font-size: 22px
+    font-weight: normal
+    color: #ffffff
+    font-weight: 500
+
+@media (max-width: 480px)
+  .header-10-sub.v-center > div
+    padding-top: 35px
+    padding-bottom: 70px
+
+@media (max-width: 480px)
+  .header-10-sub .control-btn
+    bottom: 30px

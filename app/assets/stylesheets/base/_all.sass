@@ -2,9 +2,31 @@
 //  BASE IMPORTS
 // ---------------------------------------------------------------------------------/
 //
+// BASE PARTIALS
+// --------------------------------------------------
+@import "variables"
+@import "fonts"
+
 // FRAMEWORKS AND PLUGINS
 // --------------------------------------------------
-@import "bootstrap/bootstrap.css"
+@import "compass"
+@import "font-awesome"
+@import "bootstrap/css/bootstrap.scss"
+@import "css/flat-ui.scss"
+
+
+// UI kit assets
+// --------------------------------------------------
+@import "startup-kit-tpl/base_header"
+@import "startup-kit-tpl/header_1"
+@import "startup-kit-tpl/header_2"
+@import "startup-kit-tpl/header_10"
+@import "startup-kit-tpl/base_content"
+@import "startup-kit-tpl/content_32"
+@import "startup-kit-tpl/content_2"
+@import "startup-kit-tpl/price_3"
+@import "startup-kit-tpl/footer_3"
+
 
 // COMPASS
 // --------------------------------------------------
@@ -18,7 +40,6 @@
 @import "variables"
 @import "fonts"
 
-
 // ---------------------------------------------------------------------------------
 //  DEFAULT STYLES
 // ---------------------------------------------------------------------------------
@@ -30,7 +51,6 @@ html
 // --------------------------------------------------
 
 body
-  padding-top: 50px
 
   .profiler-results
     display: none

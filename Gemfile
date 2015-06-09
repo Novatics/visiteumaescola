@@ -23,6 +23,8 @@ gem 'uglifier',       '>= 1.3.0'
 gem 'font_assets'
 gem 'modernizr-rails'
 gem 'selectivizr-rails'
+gem "font-awesome-rails"
+
 # compass and plugins
 gem 'compass-rails'
 gem 'compass-normalize'
@@ -51,13 +53,11 @@ group :development do
   gem 'rails-boilerplate'
   gem 'magic_encoding'
   gem 'html2slim'
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload'
   gem 'rb-fsevent', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
-  gem 'rack-mini-profiler'  
+  gem 'rack-mini-profiler'
 end
 
 group :production do

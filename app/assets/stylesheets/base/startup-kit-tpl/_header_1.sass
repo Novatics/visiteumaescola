@@ -1,0 +1,202 @@
+.header-1
+  left: 0
+  top: 0
+  z-index: 100
+  width: 100%
+  padding-top: 0
+  padding-bottom: 0
+  > .container
+    position: relative
+  .navbar
+    position: absolute
+    z-index: 2
+    top: 45px
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight: 500
+    &.navbar-fixed-top
+      position: fixed
+    .brand
+      font-size: 25px
+      font-weight: normal
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-weight: 800
+      color: #ffffff
+      &:hover, &:focus, &.active
+        color: #ffffff
+      img:first-child
+        float: left
+        margin: -10px 15px 0 0
+    .nav > li
+      margin-left: 20px
+      &:first-child
+        margin-left: 0
+      > a
+        padding: 35px 0 27px
+        font-size: 13px
+        font-weight: normal
+        font-weight: 800
+        letter-spacing: 1px
+        color: #ffffff
+        &:hover, &:focus, &.active
+          color: rgba(0, 0, 0, 0.4)
+      &.active > a
+        color: rgba(0, 0, 0, 0.4)
+        &:hover, &:focus, &.active
+          color: rgba(0, 0, 0, 0.4)
+
+.header-1-sub
+  position: relative
+  z-index: 50
+  left: 0
+  width: 100%
+  height: 500px
+  padding: 0
+  overflow: hidden
+  color: white
+  background-color: #222527
+  .container
+    position: relative
+  h3
+    margin: 0 0 20px 0
+    font-size: 36px
+    font-weight: normal
+    color: #ffffff
+    font-weight: 500
+  .lead
+    font-size: 30px
+    font-weight: normal
+    color: #ffffff
+    font-weight: 300
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    margin-bottom: 0
+  .pt-perspective
+    position: relative
+    height: 100% !important
+    -webkit-perspective: 1200px
+    -moz-perspective: 1200px
+    perspective: 1200px
+  .pt-page
+    width: 100%
+    height: 100% !important
+    position: absolute
+    top: 0
+    left: 0
+    visibility: hidden
+    overflow: hidden
+    background-color: #363940
+    -webkit-backface-visibility: hidden
+    -moz-backface-visibility: hidden
+    backface-visibility: hidden
+    -webkit-transform: translate3d(0, 0, 0)
+    -moz-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    -webkit-transform-style: preserve-3d
+    -moz-transform-style: preserve-3d
+    transform-style: preserve-3d
+  .pt-page-1 .background
+    background-image: url("criancas-1.jpg")
+    opacity: 75
+    filter: alpha(opacity = 7500)
+    opacity: 0.75
+    filter: alpha(opacity = 75)
+    background-position: 50% 30%
+  .pt-page-2 .background
+    background-image: url("img-2.jpg")
+    opacity: 75
+    filter: alpha(opacity = 7500)
+    opacity: 0.75
+    filter: alpha(opacity = 75)
+    background-position: 50% 30%
+  .pt-page-3 .background
+    background-image: url("img-3.jpg")
+    opacity: 75
+    filter: alpha(opacity = 7500)
+    opacity: 0.75
+    filter: alpha(opacity = 75)
+    background-position: 50% 30%
+  .pt-page-current, .no-js .pt-page
+    visibility: visible
+    z-index: 1
+  .pt-page-ontop
+    z-index: 999
+  .page-transitions
+    *
+      line-height: normal
+    .background
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      -webkit-background-size: cover
+      -moz-background-size: cover
+      -o-background-size: cover
+      background-size: cover
+    .caption
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 140px
+    .controls > *
+      position: absolute
+      left: 15
+      top: 410px
+      z-index: 1000
+      width: 20px
+      overflow: hidden
+      text-decoration: none
+      font-size: 18px
+      color: #7f8c8d
+      font-weight: normal
+      font-style: normal
+      color: #ffffff
+      -webkit-transition: color 0.25s
+      -moz-transition: color 0.25s
+      -o-transition: color 0.25s
+      transition: color 0.25s
+      &:hover, &:focus, &.active
+        color: rgba(0, 0, 0, 0.4)
+      &.control-next
+        left: 45px
+
+@media (max-width: 480px)
+  .header-1-sub
+    height: 420px
+
+@media (max-width: 767px)
+  .header-1-sub .container
+    margin-right: 5px
+    margin-left: 5px
+
+@media (max-width: 600px)
+  .header-1-sub h3
+    font-size: 30px
+    font-weight: normal
+    color: #ffffff
+
+@media (max-width: 480px)
+  .header-1-sub h3
+    font-size: 26px
+    font-weight: normal
+    color: #ffffff
+    margin: 0 0 24px 0
+
+@media (max-width: 600px)
+  .header-1-sub .lead
+    font-size: 26px
+    font-weight: normal
+    color: #ffffff
+
+@media (max-width: 480px)
+  .header-1-sub .lead
+    font-size: 22px
+    font-weight: normal
+    color: #ffffff
+
+@media (max-width: 480px)
+  .header-1-sub .page-transitions .caption
+    bottom: 73px
+
+@media (max-width: 480px)
+  .header-1-sub .page-transitions .controls > *
+    top: 363px
