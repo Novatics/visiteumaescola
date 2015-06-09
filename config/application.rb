@@ -6,7 +6,7 @@ if defined?(Bundler)
   Bundler.require(:default, Rails.env)
 end
 
-module RailsHerokuBootstrap
+module VisiteUmaEscola
   class Application < Rails::Application
     config.encoding = "utf-8"
 

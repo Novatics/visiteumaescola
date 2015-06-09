@@ -1,4 +1,4 @@
-RailsHerokuBootstrap::Application.routes.draw do
+VisiteUmaEscola::Application.routes.draw do
   get '/usuarios/minha-conta' => 'settings#edit', as: :edit_user
   put '/usuarios' => 'settings#update', as: :update_user
   
