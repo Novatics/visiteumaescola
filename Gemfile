@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.2.3'
 
-gem 'rails',                   '4.1.0'
+gem 'rails',                   '4.2.3'
 gem 'pg'
 gem 'slim'
 gem 'unicorn'
@@ -18,8 +18,8 @@ gem 'protected_attributes'
 gem 'rails-observers'
 
 # assets
-gem 'sass-rails',     '~> 4.0.0'
-gem 'uglifier',       '>= 1.3.0'
+gem 'sass-rails',     '~> 4.0.4 '
+gem 'uglifier',       '>= 2.7.1'
 gem 'font_assets'
 gem 'modernizr-rails'
 gem 'selectivizr-rails'
@@ -64,4 +64,3 @@ group :production do
   gem 'heroku-deflater'
   gem 'rails_12factor'
 end
-
