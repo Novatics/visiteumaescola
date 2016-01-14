@@ -38,6 +38,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     arel (6.0.3)
+    bcrypt (3.1.10)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -67,12 +68,19 @@ GEM
       compass (>= 0.12.2)
     daemons (1.2.3)
     debug_inspector (0.0.2)
+    devise (3.5.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.2.5)
     email_spec (1.6.0)
       launchy (~> 2.1)
       mail (~> 2.2)
     erubis (2.7.0)
-    eventmachine (1.0.8)
+    eventmachine (1.0.9)
     execjs (2.6.0)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -108,6 +116,7 @@ GEM
     magic_encoding (0.0.2)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
@@ -122,9 +131,14 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
+    orm_adapter (0.5.0)
     pg (0.18.4)
     protected_attributes (1.1.3)
       activemodel (>= 4.0.1, < 5.0)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.6.4)
     rack-mini-profiler (0.9.8)
       rack (>= 1.1.3)
@@ -165,11 +179,13 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     raindrops (0.15.0)
-    rake (10.4.2)
+    rake (10.5.0)
     rb-fsevent (0.9.7)
     redis (3.2.2)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
+    responders (2.1.1)
+      railties (>= 4.2.0, < 5.1)
     resque (1.25.2)
       mono_logger (~> 1.0)
       multi_json (~> 1.0)
@@ -181,7 +197,7 @@ GEM
     rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
-    rspec-mocks (3.4.0)
+    rspec-mocks (3.4.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.4.0)
     rspec-rails (3.4.0)
@@ -204,9 +220,9 @@ GEM
     sassy-strings (1.0.0)
       compass (>= 0.12.2)
     selectivizr-rails (1.1.2)
-    sentry-raven (0.15.2)
+    sentry-raven (0.15.3)
       faraday (>= 0.7.6)
-    shoulda-matchers (3.0.1)
+    shoulda-matchers (3.1.0)
       activesupport (>= 4.0.0)
     sinatra (1.4.6)
       rack (~> 1.4)
@@ -223,6 +239,7 @@ GEM
     slim (3.0.6)
       temple (~> 0.7.3)
       tilt (>= 1.3.3, < 2.1)
+    slop (3.6.0)
     sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -259,6 +276,8 @@ GEM
     uniform_notifier (1.9.0)
     vegas (0.1.11)
       rack (>= 1.0.0)
+    warden (1.2.4)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -270,6 +289,7 @@ DEPENDENCIES
   color-schemer
   compass-normalize
   compass-rails
+  devise
   email_spec
   factory_girl_rails
   font-awesome-rails
@@ -284,6 +304,7 @@ DEPENDENCIES
   oily_png
   pg
   protected_attributes
+  pry
   rack-mini-profiler
   rails (= 4.2.3)
   rails-boilerplate

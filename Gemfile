@@ -8,6 +8,7 @@ gem 'unicorn'
 
 gem 'friendly_id'
 gem 'resque'
+gem 'devise'
 
 # external services
 gem 'newrelic_rpm'
@@ -50,6 +51,7 @@ end
 group :development do
   gem 'foreman'
   gem 'thin'
+  gem 'pry'
   gem 'rails-boilerplate'
   gem 'magic_encoding'
   gem 'html2slim'
