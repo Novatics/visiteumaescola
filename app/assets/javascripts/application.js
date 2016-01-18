@@ -24,3 +24,27 @@ $(function(){
   });
   console.log("loading...");
 })
+
+$("#submitUser").click( function() {
+    $('#new_user').submit();
+});
+
+$('#myModal').on('shown.bs.modal', function (e) {
+  // do cool stuff here all day… no need to change bootstrap
+  $('#new_user').validate({ // initialize the plugin
+       rules: {
+           "user[email]": {
+               required: true,
+               email: true
+           },
+           "user[password]": {
+               required: true,
+               minlength: 8
+           },
+           "user[password_confirmation]":{
+             required:true,
+             minlength:8
+           }
+       }
+   });
+});
