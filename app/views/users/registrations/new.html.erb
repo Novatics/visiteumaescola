@@ -21,6 +21,17 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <h2>Tasks</h2>
+  <%= f.fields_for SchoolProfile.new do |ff| %>
+    <div>
+      <%= ff.label :address %>
+      <%= ff.text_field :address %>
+
+      <%= ff.label :size %>
+      <%= ff.text_field :size %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

@@ -43,7 +43,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.for(:sign_up) << :role_id
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :role_id, :school_profile_attributes => [:address, :size]) }
+    #devise_parameter_sanitizer.for(:sign_up) << :role_id
   end
 
   # If you have extra params to permit, append them to the sanitizer.
