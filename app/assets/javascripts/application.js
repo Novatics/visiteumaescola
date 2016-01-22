@@ -25,19 +25,37 @@ $(function(){
   console.log("loading...");
 })
 
-$("#submitUser").click( function() {
-    //$('#volunteer_profile').submit();
-    $('#new_user').submit();
+$("#submitVolunteer").click( function() {
+    $('#volunteer_user').submit();
 });
 
 $("#submitSchool").click( function() {
-    //$('#school_profile').submit();
     $('#school_user').submit();
 });
 
 $('#modalSchool').on('shown.bs.modal', function (e) {
   // do cool stuff here all day… no need to change bootstrap
   $('#school_user').validate({ // initialize the plugin
+       rules: {
+           "user[email]": {
+               required: true,
+               email: true
+           },
+           "user[password]": {
+               required: true,
+               minlength: 6
+           },
+           "user[password_confirmation]":{
+             required:true,
+             minlength:6
+           }
+       }
+   });
+});
+
+$('#modalVolunteer').on('shown.bs.modal', function (e) {
+  // do cool stuff here all day… no need to change bootstrap
+  $('#volunteer_user').validate({ // initialize the plugin
        rules: {
            "user[email]": {
                required: true,

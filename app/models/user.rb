@@ -3,10 +3,10 @@ class User < ActiveRecord::Base
   before_create :set_default_role
   # User relationship for profiles
   has_one :school_profile
-  #has_one :volunteer_profile
+  has_one :volunteer_profile
   # Enable nested attributes for profiles
   accepts_nested_attributes_for :school_profile
-  #accepts_nested_attributes_for :volunteer_profile
+  accepts_nested_attributes_for :volunteer_profile
 
   private
   def set_default_role

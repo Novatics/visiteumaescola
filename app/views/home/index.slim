@@ -8,7 +8,7 @@
                     'através da sua participação.</h1>
           </div>
           <div class="btns">
-            <a class="btn btn-inverse" data-toggle="modal" data-target="#myModal">Voluntário</a>
+            <a class="btn btn-inverse" data-toggle="modal" data-target="#modalVolunteer">Voluntário</a>
             <a class="btn btn-danger"  data-toggle="modal" data-target="#modalSchool">Escola</a>
           </div>
         </div>
@@ -62,7 +62,7 @@
                 </p>
 
                 <div class="btns">
-                    <a class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="fui-apple"> </span>Participe</a>
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#modalVolunteer"><span class="fui-apple"> </span>Participe</a>
                     <a href="#"><b>Conheça o projeto</b></a>
                 </div>
             </div>
@@ -76,15 +76,15 @@
 </section>
 
 /-- Modal Volunteer--/
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="modalVolunteer" tabindex="-1" role="dialog" aria-labelledby="modalVolunteerLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Cadastro de Voluntário</h4>
+        <h4 class="modal-title" id="modalVolunteerLabel">Cadastro de Voluntário</h4>
       </div>
       <div class="modal-body">
-        <form id="new_user" class="new_user" method="post" action="users/">
+        <form id="volunteer_user" class="new_user" method="post" action="users/">
           <div class="field">
             <label for="user_email" class="control-label">Email:</label> 
             <input id="user_email" class="form-control" type="email" name="user[email]" value="" autofocus="autofocus"></input>
@@ -97,11 +97,15 @@
             <label for="user_password_confirmation" class="control-label">Confirme a senha:</label>
             <input id="user_password_confirmation" class="form-control" type="password" name="user[password_confirmation]" value="" autocomplete="off"></input>
           </div>
+          <div class=field>
+            <label for="user_volunteer_profile_skills" class="control-label">Habilidades:</label>
+            <input id="user_volunteer_profile_skills" class="form-control" type="text" name="user[volunteer_profile_attributes][skills]" value="" autocomplete="off"></input>
+          </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-        <button type="button" id="submitUser" class="btn btn-primary">Confirmar</button>
+        <button type="button" id="submitVolunteer" class="btn btn-primary">Confirmar</button>
       </div>
     </div>
   </div>
@@ -132,11 +136,11 @@
           </div>
           <div class=field>
             <label for="user_school_profile_address" class="control-label">Endereço:</label>
-            <input id="user_school_profile_address" class="form-control" type="password" name="user[school_profile_attributes][address]" value="" autocomplete="off"></input>
+            <input id="user_school_profile_address" class="form-control" type="text" name="user[school_profile_attributes][address]" value="" autocomplete="off"></input>
           </div>
           <div class=field>
             <label for="user_school_profile_size" class="control-label">Quantidade de alunos:</label>
-            <input id="user_school_profile_size" class="form-control" type="password" name="user[school_profile_attributes][size]" value="" autocomplete="off"></input>
+            <input id="user_school_profile_size" class="form-control" type="text" name="user[school_profile_attributes][size]" value="" autocomplete="off"></input>
           </div>
         </form>
       </div>
