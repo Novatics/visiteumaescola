@@ -26,12 +26,18 @@ $(function(){
 })
 
 $("#submitUser").click( function() {
+    //$('#volunteer_profile').submit();
     $('#new_user').submit();
 });
 
-$('#myModal').on('shown.bs.modal', function (e) {
+$("#submitSchool").click( function() {
+    //$('#school_profile').submit();
+    $('#school_user').submit();
+});
+
+$('#modalSchool').on('shown.bs.modal', function (e) {
   // do cool stuff here all day… no need to change bootstrap
-  $('#new_user').validate({ // initialize the plugin
+  $('#school_user').validate({ // initialize the plugin
        rules: {
            "user[email]": {
                required: true,
@@ -39,11 +45,11 @@ $('#myModal').on('shown.bs.modal', function (e) {
            },
            "user[password]": {
                required: true,
-               minlength: 8
+               minlength: 6
            },
            "user[password_confirmation]":{
              required:true,
-             minlength:8
+             minlength:6
            }
        }
    });
