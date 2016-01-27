@@ -46,8 +46,7 @@ $('#modalSchool').on('shown.bs.modal', function (e) {
                minlength: 6
            },
            "user[password_confirmation]":{
-             required:true,
-             minlength:6
+             equalTo: "#user_password"
            }
        }
    });
@@ -66,8 +65,7 @@ $('#modalVolunteer').on('shown.bs.modal', function (e) {
                minlength: 6
            },
            "user[password_confirmation]":{
-             required:true,
-             minlength:6
+             equalTo: "#user_password"
            }
        }
    });
