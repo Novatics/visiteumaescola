@@ -1,10 +1,9 @@
 VisiteUmaEscola::Application.routes.draw do
+  root  to:                     'home#index'
+  #get ':slug'                => 'pages#show',     as: :page
+
   devise_for :users, controllers: { registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords" }
 
-  root  to:                     'home#index'
-
-  get 'frontend/:template'   => 'frontend#show'
-  get 'frontend'             => 'frontend#index'
-
-  get ':slug'                => 'pages#show',     as: :page
+  #No matching route redirects to home page
+  get '*path' => redirect('/')
 end
