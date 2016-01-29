@@ -46,7 +46,7 @@
   left: 0
   width: 100%
   position: relative
-  padding-top: 215px
+  padding-top: 190px
   padding-bottom: 115px
   color: white
   text-align: center
@@ -57,8 +57,9 @@
     h1
       margin: 0 0 18px
       font-size: 30px
+      font-family: 'Source Sans Pro', sans-serif
       font-weight: normal
-      color: #ffffff
+      color: #003344
       font-weight: 300
       line-height: 40px
     p
@@ -67,6 +68,13 @@
       color: #506e8c
       font-weight: 800
       letter-spacing: 2px
+  a
+    color: #E2E2E2
+    font-size: 17px
+    font-family: 'Source Sans Pro', sans-serif
+    &:hover, &:focus, &.active
+      color: #E2E2E2
+
   .btns
     display: inline-block
     margin-top: 15px
@@ -88,6 +96,12 @@
         background-color: #cd6155
       &:active, &.active
         background-color: #a33025
+    &.btn-volunteer
+      background-color: #003344
+      border-radius: 2px
+    &.btn-school
+      background-color: #FF5500
+      border-radius: 2px
 
 @media (max-width: 991px)
   .header-2-sub
