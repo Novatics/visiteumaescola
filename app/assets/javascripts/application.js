@@ -25,6 +25,15 @@ $(function(){
   console.log("loading...");
 })
 
+// Show and slide to volunteer signup form
+$('#showVolunteerForm').click(function(){
+    $('#formSchool').stop().slideUp(500);
+    $('#formVolunteer').slideToggle(500, function(){
+        if($('#formVolunteer').is(":visible")){
+            $("html, body").animate({ scrollTop : $('#formVolunteer').position().top}, 1000);
+        }});
+});
+
 $("#submitVolunteer").click( function() {
     $('#volunteer_user').submit();
 });

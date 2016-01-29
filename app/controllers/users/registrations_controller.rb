@@ -6,13 +6,28 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # GET /resource/sign_up
   def new
     #binding.pry
-    @user = User.new
+    super
   end
 
   # POST /resource
   def create
-    #binding.pry
-    super
+    build_resource(sign_up_params)
+
+    resource.save
+    yield resource if block_given?
+    if resource.persisted?
+      if resource.active_for_authentication?
+        set_flash_message :notice, :signed_up if is_flashing_format?
+        sign_up(resource_name, resource)
+        respond_with resource, location: after_sign_up_path_for(resource)
+      else
+        set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
+        expire_data_after_sign_in!
+        respond_with resource, location: after_inactive_sign_up_path_for(resource)
+      end
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /resource/edit
@@ -46,11 +61,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :password_confirmation, :role_id, :school_profile_attributes => [:address, :size], :volunteer_profile_attributes => [:skills]) }
     #devise_parameter_sanitizer.for(:sign_up) << :role_id
   end
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_account_update_params
-  #   devise_parameter_sanitizer.for(:account_update) << :attribute
-  # end
 
   # The path used after sign up.
   # def after_sign_up_path_for(resource)
