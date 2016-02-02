@@ -3,7 +3,97 @@
   left: 0
   width: 100%
   position: relative
-  padding-top: 115px
-  padding-bottom: 115px
+  padding-top: 100px
+  padding-bottom: 100px
   color: white
   text-align: center
+  img
+    width: 80%
+    margin-top: 20px
+    position: relative
+
+.content-21
+  width: 100%
+  z-index: 50
+  left: 0
+  width: 100%
+  position: relative
+  padding-top: 185px
+  padding-bottom: 165px
+  color: #FFFFFF
+  text-align: center
+  img
+    width: 100%
+    margin-top: 50px
+    position: relative
+  a
+    color: #003344
+    font-size: 17px
+    font-family: 'Source Sans Pro', sans-serif
+    &:hover, &:focus, &.active
+      color: #003344
+
+  .btns
+    display: inline-block
+    margin-top: 50px
+    .btn
+      min-width: 160px
+      float: left
+      + .btn
+        margin-left: 20px
+  .btn
+    &.btn-volunteer
+      background-color: #FFFFFF
+      border-radius: 2px
+    &.btn-school
+      background-color: #FF5500
+      border-radius: 2px
+
+@media (max-width: 480px)
+  .content-21 .btns
+    margin-top: 48px
+    display: block
+
+@media (max-width: 480px)
+  .content-21 .btns .btn
+    float: none
+    display: block
+    margin-top: 10px
+    &:first-child
+      margin-top: 0
+
+@media (max-width: 480px)
+  .content-21 .btns .btn + .btn
+    margin-left: 0
+
+.content-22
+  z-index: 50
+  left: 0
+  width: 100%
+  position: relative
+  text-align: left
+  h1
+    margin: 0
+    font-family: 'Source Sans Pro', sans-serif
+    font-size: 31px
+    font-weight: 300
+    color: #000000
+  img
+    width: 70%
+    margin-top: 50px
+    position: relative
+    align-items: center
+    display: block
+    margin-left: auto
+    margin-right: auto
+  h6
+    font-weight: 500
+    text-align: center
+  h5
+    padding-top: 50px
+    vertical-align: middle
+    font-family: 'Source Sans Pro', sans-serif
+    font-size: 31px
+    font-weight: 300
+    color: #000000
+    text-align: center

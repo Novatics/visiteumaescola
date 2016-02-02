@@ -1,3 +1,4 @@
+/--Home Page Frame--/
 <section class="header-2-sub bg-home">
     <div class="background">&nbsp;</div>
     <div class="col-sm-6 col-sm-offset-3">
@@ -19,6 +20,7 @@
     </div>
 </section>
 
+/--About us Frame--/
 <section>
   <div class="content-28">
       <div class="container">
@@ -69,50 +71,88 @@
   </div>
 </section>
 
-<section>
-  <div class="content-62 bg-thanks">
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-8 col-sm-offset-2">
-              <h1>nós acreditamos que<br/>
-                      'pequenas ações podem causar
-              </h1>
-              <h2>
-                '<b>GRANDES IMPACTOS</b>
-              </h2>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="content-29">
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-8 col-sm-offset-3">
-                  <p>muito obrigado pela sua participação!</p>
-              </div>
-          </div>
-      </div>
-  </div>
-  / <div class="content-28 bg-darkblue">
-  /     <div class="container">
-  /         <div class="row">
-  /             <div class="col-sm-8 col-sm-offset-3">
-  /             </div>
-  /         </div>
-  /     </div>
-  / </div>
-</section>
-
+/--How it works Frame--/
 <section class="content-20 bg-darkblue">
   == image_tag("infografico.png")
 </section>
 
-<section class="content-2">
-  <button type="button" id="showVolunteerForm" class="btn btn-primary">TESTE FORM</button>
+/--How to Help--/
+<section class="content-22 bg-white">
+  <div class="content-28">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-10 col-sm-offset-1">
+                  <p><b>COMO VOCÊ PODE AJUDAR?</b></p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+          <h1>É possível ajudar de diversas maneiras, de<br/>
+                  'acordo com suas habilidades e<br/>
+                  'disponibilidade de tempo.</h1>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-2 col-sm-offset-2">
+            == image_tag("icon-12.svg")
+            <h6>consertos e instalações</h6>
+          </div>
+          <div class="col-sm-2">
+            == image_tag("icon-11.svg")
+            <h6>palestras e <br/>cursos</h6>
+          </div>
+          <div class="col-sm-2">
+            == image_tag("icon-10.svg")
+            <h6>monitoria e <br/>reforço</h6>
+          </div>
+          <div class="col-sm-2">
+            == image_tag("icon-08.svg")
+            <h6>suporte <br/>psico-pedagógico</h6>
+          </div>
+          <div class="col-sm-2 col-sm-offset-3">
+            == image_tag("icon-11.svg")
+            <h6>atividades <br/>culturais</h6>
+          </div>
+          <div class="col-sm-2">
+            == image_tag("icon-15.svg")
+            <h6>patrocínios</h6>
+          </div>
+          <div class="col-sm-2">
+            <h5><b>E muito<br/> mais!</b></h5>
+          </div>
+      </div>
+  </div>
+</section>
+
+/ <section>
+/   <button type="button" id="showVolunteerForm" class="btn btn-primary">TESTE FORM</button>
+/ </section>
+
+/--Sign-up Frame--/
+<section class="content-21 bg-sign-up">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="hero-unit">
+          <h2><b>Vamos lá!</b><br/>
+          </h2>
+        </div>
+        <div class="btns">
+          <a class="btn btn-volunteer">me voluntariar</a>
+          <a class="btn btn-school">cadastrar minha escola</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 /--Volunteer Form--/
-<section class="content-2" hidden="true" id="formVolunteer">
+<section class="content-2" id="formVolunteer">
     <div class="container">
       <form id="volunteer_user" class="new_user" method="post" action="users/">
         <div class="field">
@@ -168,6 +208,41 @@
     <div class="container">
       <button type="button" id="submitVolunteer" class="btn btn-primary">enviar meu cadastro!</button>
     </div>  
+</section>
+
+/--Thanks Frame--/
+<section>
+  <div class="content-62 bg-thanks">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-8 col-sm-offset-2">
+              <h1>nós acreditamos que<br/>
+                      'pequenas ações podem causar
+              </h1>
+              <h2>
+                '<b>GRANDES IMPACTOS</b>
+              </h2>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="content-29">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-8 col-sm-offset-3">
+                  <p>muito obrigado pela sua participação!</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="content-28 bg-darkblue">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-8 col-sm-offset-3">
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
 
 / /-- Modal Volunteer--/
