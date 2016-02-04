@@ -26,56 +26,57 @@ $(function(){
 })
 
 // Show and slide to volunteer signup form
-$('#showVolunteerForm').click(function(){
-    $('#formSchool').stop().slideUp(500);
-    $('#formVolunteer').slideToggle(500, function(){
-        if($('#formVolunteer').is(":visible")){
-            $("html, body").animate({ scrollTop : $('#formVolunteer').position().top}, 1000);
-        }});
-});
+$('.showVolunteerForm').click(function(){
+    // $('#formSchool').stop().slideUp(500);
+    // $('#formVolunteer').slideToggle(0, function(){
+  if($('#formVolunteer').is(":visible")){
+      $("html, body").animate({ scrollTop : $('#formVolunteer').position().top}, 1000);
+  }});
+// });
 
 $("#submitVolunteer").click( function() {
-    $('#volunteer_user').submit();
+  $('#volunteer_user').submit();
 });
 
 $("#submitSchool").click( function() {
-    $('#school_user').submit();
+  $('#school_user').submit();
 });
 
-$('#modalSchool').on('shown.bs.modal', function (e) {
-  // do cool stuff here all day… no need to change bootstrap
-  $('#school_user').validate({ // initialize the plugin
-       rules: {
-           "user[email]": {
-               required: true,
-               email: true
-           },
-           "user[password]": {
-               required: true,
-               minlength: 6
-           },
-           "user[password_confirmation]":{
-             equalTo: "#user_password"
-           }
-       }
-   });
-});
 
-$('#modalVolunteer').on('shown.bs.modal', function (e) {
-  // do cool stuff here all day… no need to change bootstrap
-  $('#volunteer_user').validate({ // initialize the plugin
-       rules: {
-           "user[email]": {
-               required: true,
-               email: true
-           },
-           "user[password]": {
-               required: true,
-               minlength: 6
-           },
-           "user[password_confirmation]":{
-             equalTo: "#user_password"
-           }
-       }
-   });
-});
+$('#volunteer_user').validate({ // initialize the plugin
+   rules: {
+     "user[name]": {
+         required: true
+     },
+     "user[email]": {
+         required: true,
+         email: true
+     },
+     "user[password]": {
+         required: true,
+         minlength: 6
+     },
+     "user[password_confirmation]":{
+       equalTo: "#user_password"
+     }
+   }
+ });
+
+// $('#modalSchool').on('shown.bs.modal', function (e) {
+//   // do cool stuff here all day… no need to change bootstrap
+//   $('#school_user').validate({ // initialize the plugin
+//        rules: {
+//            "user[email]": {
+//                required: true,
+//                email: true
+//            },
+//            "user[password]": {
+//                required: true,
+//                minlength: 6
+//            },
+//            "user[password_confirmation]":{
+//              equalTo: "#user_password"
+//            }
+//        }
+//    });
+// });
