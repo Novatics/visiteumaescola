@@ -98,6 +98,12 @@
     <div class="features">
       <div class="container">
         <div class="row">
+          <div class="col-sm-5 col-sm-offset-1">
+            == image_tag("slice1.png")
+          </div>
+          <div class="col-sm-5">
+            == image_tag("slice2.png")
+          </div>
           <div class="col-sm-10 col-sm-offset-1">
               <h6>O Brasil está atrás da Nova Zelaândia e<br/>
                 'do México, que investem <b>18,4%</b> de seus<br/>
@@ -284,26 +290,22 @@
               <label for="user_phone" class="control-label">telefone</label> 
               <input id="user_phone" class="form-control" type="text" name="user[phone]" value="" autofocus="autofocus"></input>
             </div>
-            <div class="field">  
-              <legend>posso ajudar</legend>
-              <input type="checkbox" name="skills" value="Bike" id="first_checkbox"> consertos e instalações<br>
-              <input type="checkbox" name="skills" value="Car"> monitoria e reforço<br>
-              <input type="checkbox" name="skills" value="Bike"> palestras e cursos<br>
-              <input type="checkbox" name="skills" value="Car"> suporte psicológico<br>
-              <input type="checkbox" name="skills" value="Bike"> atividades culturais<br>
-              <input type="checkbox" name="skills" value="Car"> patrocínio<br>
-            </div>
             <div class="field">
               <label for="user_password" class="control-label">senha</label> 
               <input id="user_password" class="form-control" type="password" name="user[password]" value="" autocomplete="off"></input>
             </div>
             <div class="field">
-              <label for="user_password_confirmation" class="control-label">confirme a senha</label>
+              <label for="user_password_confirmation" class="control-label">confirme a senha</label> 
               <input id="user_password_confirmation" class="form-control" type="password" name="user[password_confirmation]" value="" autocomplete="off"></input>
             </div>
-            <div class="field">
-              <label for="user_volunteer_profile_skills" class="control-label">Habilidades:</label>
-              <input id="user_volunteer_profile_skills" class="form-control" type="text" name="user[volunteer_profile_attributes][skills]" value="" autocomplete="off"></input>
+            <div class="field">  
+              <legend>posso ajudar</legend>
+              <input type="checkbox" name="user[volunteer_profile_attributes][skills][]" value="conserto" id="first_checkbox"> consertos e instalações<br>
+              <input type="checkbox" name="user[volunteer_profile_attributes][skills][]" value="monitoria"> monitoria e reforço<br>
+              <input type="checkbox" name="user[volunteer_profile_attributes][skills][]" value="palestra"> palestras e cursos<br>
+              <input type="checkbox" name="user[volunteer_profile_attributes][skills][]" value="psicologo"> suporte psicológico<br>
+              <input type="checkbox" name="user[volunteer_profile_attributes][skills][]" value="cultural"> atividades culturais<br>
+              <input type="checkbox" name="user[volunteer_profile_attributes][skills][]" value="patrocinio"> patrocínio<br>
             </div>
           </form>
           <div class="btns">

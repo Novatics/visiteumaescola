@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20160119164441) do
 
   create_table "school_profiles", force: :cascade do |t|
     t.string   "address"
-    t.string   "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
@@ -36,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160119164441) do
     t.string   "name"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "phone"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
