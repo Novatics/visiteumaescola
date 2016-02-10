@@ -1,15 +1,10 @@
 class SchoolProfilesController < ApplicationController
-
   # GET
   def new
-    binding.pry
-    @schoolprofile = SchoolProfile.new
   end
 
   # POST
   def create
-    binding.pry
-    @school_profile = SchoolProfile.new
   end
 
   # GET

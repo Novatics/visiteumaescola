@@ -9,40 +9,59 @@
 #= require modernizr.custom.js
 #= require page-transitions.js
 
-
-
-$(function(){
-  var pt = PageTransitions();
-  pt.init('#pt-main');
-  $('#pt-main .control-prev').on('click', function() {
-      pt.gotoPage(5, 'prev');
-      return false;
-  });
-  $('#pt-main .control-next').on('click', function() {
-      pt.gotoPage(6, 'next');
-      return false;
-  });
-  console.log("loading...");
-})
-
-// Show and slide to volunteer signup form
+// Scroll to volunteerForm
 $('.showVolunteerForm').click(function(){
-    // $('#formSchool').stop().slideUp(500);
-    // $('#formVolunteer').slideToggle(0, function(){
-  if($('#formVolunteer').is(":visible")){
-      $("html, body").animate({ scrollTop : $('#formVolunteer').position().top}, 1000);
-  }});
-// });
+  if($('#formSchool').is(":visible")){
+    $('#formSchool').animate({width: 'toggle'});
+    $('#formVolunteer').animate({width: 'toggle'}, function(){
+      $("html, body").animate({ scrollTop : $('#formVolunteer').position().top}, 'slow');
+    });
+  }
+  else{
+    $("html, body").animate({ scrollTop : $('#formVolunteer').position().top}, 'slow');
+  }
+});
 
+// Scroll to schoolForm
+$('.showSchoolForm').click(function(){
+  if($('#formVolunteer').is(":visible")){
+    $('#formVolunteer').animate({width: 'toggle'});
+    $('#formSchool').animate({width: 'toggle'}, function(){
+      $("html, body").animate({ scrollTop : $('#formSchool').position().top}, 'slow');
+    });
+  }
+  else{
+    $("html, body").animate({ scrollTop : $('#formSchool').position().top}, 'slow');
+  }
+});
+
+// Slide effect to School form
+$("#toSchool").click(function(e){
+  // Prevent screen from moving
+  e.preventDefault();
+  $('#formSchool').animate({width: 'toggle'}, 'slow');
+  $('#formVolunteer').animate({width: 'toggle'}, 'slow');
+});
+
+//Slide effect to User form
+$("#toVolunteer").click(function(e){
+  // Prevent screen from moving
+  e.preventDefault();
+  $('#formSchool').animate({width: 'toggle'}, 'slow');
+  $('#formVolunteer').animate({width: 'toggle'}, 'slow');
+});
+
+//Submit volunteer form
 $("#submitVolunteer").click( function() {
   $('#volunteer_user').submit();
 });
 
+//Submit school form
 $("#submitSchool").click( function() {
   $('#school_user').submit();
 });
 
-
+//Validate Volunteer Form
 $('#volunteer_user').validate({ // initialize the plugin
    rules: {
      "user[name]": {
@@ -60,23 +79,24 @@ $('#volunteer_user').validate({ // initialize the plugin
        equalTo: "#user_password"
      }
    }
- });
+});
 
-// $('#modalSchool').on('shown.bs.modal', function (e) {
-//   // do cool stuff here all day… no need to change bootstrap
-//   $('#school_user').validate({ // initialize the plugin
-//        rules: {
-//            "user[email]": {
-//                required: true,
-//                email: true
-//            },
-//            "user[password]": {
-//                required: true,
-//                minlength: 6
-//            },
-//            "user[password_confirmation]":{
-//              equalTo: "#user_password"
-//            }
-//        }
-//    });
+//Validate School Form
+// $('#school_user').validate({ // initialize the plugin
+//   rules: {
+//     "user[name]": {
+//         required: true
+//     },
+//     "user[email]": {
+//         required: true,
+//         email: true
+//     },
+//     "user[password]": {
+//         required: true,
+//         minlength: 6
+//     },
+//     "user[password_confirmation]":{
+//       equalTo: "#user_password"
+//     }
+//   }
 // });
