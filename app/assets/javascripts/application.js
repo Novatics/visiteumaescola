@@ -81,22 +81,22 @@ $('#volunteer_user').validate({ // initialize the plugin
    }
 });
 
-//Validate School Form
-// $('#school_user').validate({ // initialize the plugin
-//   rules: {
-//     "user[name]": {
-//         required: true
-//     },
-//     "user[email]": {
-//         required: true,
-//         email: true
-//     },
-//     "user[password]": {
-//         required: true,
-//         minlength: 6
-//     },
-//     "user[password_confirmation]":{
-//       equalTo: "#user_password"
-//     }
-//   }
-// });
+// Validate School Form
+$('#school_user').validate({ // initialize the plugin
+  rules: {
+    "user[name]": {
+        required: true
+    },
+    "user[email]": {
+        required: true,
+        email: true
+    },
+    "user[password]": {
+        required: true,
+        minlength: 6
+    },
+    "user[password_confirmation]":{
+      equalTo: "#user_school_password"
+    }
+  }
+});

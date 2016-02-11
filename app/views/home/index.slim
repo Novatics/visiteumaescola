@@ -104,7 +104,7 @@
           <div class="col-sm-5">
             == image_tag("slice2.png")
           </div>
-          <div class="col-sm-10 col-sm-offset-1">
+          <div class="col-sm-10 col-sm-offset-3">
               <h6>O Brasil está atrás da Nova Zelaândia e<br/>
                 'do México, que investem <b>18,4%</b> de seus<br/>
                 'gastos públicos em educação.</h6>
@@ -126,31 +126,29 @@
     </div>
   </div>
   <div class="content-31">
-    <div class="row">
-      <div class="col-sm-2 col-sm-offset-1">
-        == image_tag("brl_estudante_2x.png")
-      </div>
-      <div class="col-sm-2">
-        <h5><b>US$3.066,00</b><br/>por estudante</h5>
-      </div>
-      <div class="col-sm-2">
-        == image_tag("oecd_estudante_2x.png")
-      </div>
-      <div class="col-sm-3">
-        <h5><b>US$9.487,00</b><br/>por estudante</h5>
-        <p>Média da OECD- Organização para cooperação e<br/>Desenvolvimento Econômico.</p>
-      </div>
-    </div>
     <div class="features">
       <div class="container">
         <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
+          <div class="col-sm-2 col-sm-offset-1">
+            == image_tag("brl_estudante_2x.png")
+          </div>
+          <div class="col-sm-2">
+            <h5><b>US$3.066,00</b><br/>por estudante</h5>
+          </div>
+          <div class="col-sm-2">
+            == image_tag("oecd_estudante_2x.png")
+          </div>
+          <div class="col-sm-3">
+            <h5><b>US$9.487,00</b><br/>por estudante</h5>
+            <p>Média da OECD- Organização para cooperação e<br/>Desenvolvimento Econômico.</p>
+          </div>
+          <div class="col-sm-10 col-sm-offset-3">
               <h6>O Brasil está na frente somente da<br/>
                 'Indonésia, que investe <b>US$ 625,00</b></h6>
           </div>
         </div>
       </div>
-    </div>
+    </div>  
   </div>
   <div class="content-26">
     <div class="container">
@@ -165,16 +163,14 @@
     </div>
   </div>
   <div class="content-31">
-    <div class="features">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-              <h6>Em primeiro lugar está Singapura,<br/>
-                'seguida da China e da Coreia do Sul. Na<br/>
-                'última posição está Gana. Os últimos 15<br/>
-                'lugares são ocupados principalmente por<br/>
-                'países sul-americanos.</h6>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-3">
+            <h6>Em primeiro lugar está Singapura,<br/>
+              'seguida da China e da Coreia do Sul. Na<br/>
+              'última posição está Gana. Os últimos 15<br/>
+              'lugares são ocupados principalmente por<br/>
+              'países sul-americanos.</h6>
         </div>
       </div>
     </div>
@@ -239,10 +235,6 @@
     </div>
   </div>
 </section>
-
-/ <section>
-/   <button type="button" id="showVolunteerForm" class="btn btn-primary">TESTE FORM</button>
-/ </section>
 
 /--Sign-up Frame--/
 <section class="content-21 bg-sign-up">
@@ -332,6 +324,7 @@
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
         <form id="school_user" class="new_user" method="post" action="users/">
+          <input id="user_role_id" name="user[role_id]" value="2" type="hidden"></input>
           <div class="field">
             <label for="user_name" class="control-label">nome</label> 
             <input id="user_name" class="form-control" type="text" name="user[name]" value="" autofocus="autofocus"></input>
@@ -349,8 +342,8 @@
             <input id="user_school_profile_address" class="form-control" type="text" name="user[school_profile_attributes][address]" value="" autocomplete="off"></input>
           </div>
           <div class="field">
-            <label for="user_password" class="control-label">senha</label> 
-            <input id="user_password" class="form-control" type="password" name="user[password]" value="" autocomplete="off"></input>
+            <label for="user_school_password" class="control-label">senha</label> 
+            <input id="user_school_password" class="form-control" type="password" name="user[password]" value="" autocomplete="off"></input>
           </div>
           <div class="field">
             <label for="user_password_confirmation" class="control-label">confirme a senha</label>
@@ -414,80 +407,3 @@
     </div>
   </div>
 </section>
-
-/ /-- Modal Volunteer--/
-/ <div class="modal fade" id="modalVolunteer" tabindex="-1" role="dialog" aria-labelledby="modalVolunteerLabel">
-/   <div class="modal-dialog" role="document">
-/     <div class="modal-content">
-/       <div class="modal-header">
-/         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-/         <h4 class="modal-title" id="modalVolunteerLabel">Cadastro de Voluntário</h4>
-/       </div>
-/       <div class="modal-body">
-/         <form id="volunteer_user" class="new_user" method="post" action="users/">
-/           <div class="field">
-/             <label for="user_email" class="control-label">Email:</label> 
-/             <input id="user_email" class="form-control" type="email" name="user[email]" value="" autofocus="autofocus"></input>
-/           </div>
-/           <div class="field">
-/             <label for="user_password" class="control-label">Senha:</label> 
-/             <input id="user_password" class="form-control" type="password" name="user[password]" value="" autocomplete="off"></input>
-/           </div>
-/           <div class="field">
-/             <label for="user_password_confirmation" class="control-label">Confirme a senha:</label>
-/             <input id="user_password_confirmation" class="form-control" type="password" name="user[password_confirmation]" value="" autocomplete="off"></input>
-/           </div>
-/           <div class=field>
-/             <label for="user_volunteer_profile_skills" class="control-label">Habilidades:</label>
-/             <input id="user_volunteer_profile_skills" class="form-control" type="text" name="user[volunteer_profile_attributes][skills]" value="" autocomplete="off"></input>
-/           </div>
-/         </form>
-/       </div>
-/       <div class="modal-footer">
-/         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-/         <button type="button" id="submitVolunteer" class="btn btn-primary">Confirmar</button>
-/       </div>
-/     </div>
-/   </div>
-/ </div>
-/ 
-/ /-- Modal School--/
-/ <div class="modal fade" id="modalSchool" tabindex="-1" role="dialog" aria-labelledby="modalSchoolLabel">
-/   <div class="modal-dialog" role="document">
-/     <div class="modal-content">
-/       <div class="modal-header">
-/         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-/         <h4 class="modal-title" id="modalSchoolLabel">Cadastro de Escola</h4>
-/       </div>
-/       <div class="modal-body">
-/         <form id="school_user" class="new_user" method="post" action="users/">
-/           <input id="user_role_id" name="user[role_id]" value="2" hidden="true"></input>
-/           <div class="field">
-/             <label for="user_email" class="control-label">Email:</label> 
-/             <input id="user_email" class="form-control" type="email" name="user[email]" value="" autofocus="autofocus"></input>
-/           </div>
-/           <div class="field">
-/             <label for="user_password" class="control-label">Senha:</label> 
-/             <input id="user_password" class="form-control" type="password" name="user[password]" value="" autocomplete="off"></input>
-/           </div>
-/           <div class="field">
-/             <label for="user_password_confirmation" class="control-label">Confirme a senha:</label>
-/             <input id="user_password_confirmation" class="form-control" type="password" name="user[password_confirmation]" value="" autocomplete="off"></input>
-/           </div>
-/           <div class=field>
-/             <label for="user_school_profile_address" class="control-label">Endereço:</label>
-/             <input id="user_school_profile_address" class="form-control" type="text" name="user[school_profile_attributes][address]" value="" autocomplete="off"></input>
-/           </div>
-/           <div class=field>
-/             <label for="user_school_profile_size" class="control-label">Quantidade de alunos:</label>
-/             <input id="user_school_profile_size" class="form-control" type="text" name="user[school_profile_attributes][size]" value="" autocomplete="off"></input>
-/           </div>
-/         </form>
-/       </div>
-/       <div class="modal-footer">
-/         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-/         <button type="button" id="submitSchool" class="btn btn-primary">Confirmar</button>
-/       </div>
-/     </div>
-/   </div>
-/ </div>
