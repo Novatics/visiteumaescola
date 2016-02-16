@@ -22,14 +22,6 @@ html.no-js lang="#{I18n.locale}"
       == javascript_include_tag 'html5shiv-printshiv'
 
   body class="#{yield :body_class}" data-development-grid="hide"
-    / = devise_error_messages!
-    / - flash.each do |type, message|
-    /     .flash
-    /       = message
-    / /       
-    / - notice
-    / = devise_error_messages!
-
     section.page
       == render 'layouts/messages'
       == yield
