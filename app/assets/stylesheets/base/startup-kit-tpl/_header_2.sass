@@ -11,7 +11,6 @@
     position: absolute
     z-index: 2
     top: 55px
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
     &.navbar-fixed-top
       position: fixed
     .brand
@@ -19,7 +18,6 @@
       font-weight: normal
       color: #ffffff
       font-weight: 800
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
       img:first-child
         float: left
         margin: -10px 15px 0 0
@@ -47,7 +45,7 @@
   width: 100%
   position: relative
   padding-top: 190px
-  padding-bottom: 115px
+  padding-bottom: 190px
   color: white
   text-align: center
   .hero-unit
@@ -105,13 +103,13 @@
       background-color: #003344
       border-radius: 2px
 
-@media (max-width: 991px)
-  .header-2-sub
-    padding-top: 165px
-
 @media (min-width: 980px)
   .header-2-sub
     height: 100vh
+
+@media (min-width: 768px)
+  .header-2-sub
+    padding-top: 240px
 
 @media (max-width: 480px)
   .header-2-sub .btns
@@ -129,30 +127,3 @@
 @media (max-width: 480px)
   .header-2-sub .btns .btn + .btn
     margin-left: 0
-
-/*flash*/
-.alert
-  border: 1px
-  margin-bottom: 0px
-  text-align: left
-  ul
-    padding-left: 0px
-.alert-error
-  background-color: #f2dede
-  border-color: #eed3d7
-  color: #b94a48
-
-.alert-alert
-  background-color: #f2dede
-  border-color: #eed3d7
-  color: #b94a48
-
-.alert-success
-  background-color: #dff0d8
-  border-color: #d6e9c6
-  color: #468847
-
-.alert-notice
-  background-color: #dff0d8
-  border-color: #d6e9c6
-  color: #468847
