@@ -14,6 +14,8 @@ gem 'devise'
 gem 'newrelic_rpm'
 gem 'sentry-raven'
 
+gem 'activeadmin', github: 'activeadmin'
+
 # gems to help in rails 4 transition
 gem 'protected_attributes'
 gem 'rails-observers'
