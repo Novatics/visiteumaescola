@@ -14,16 +14,20 @@
 
 // Scroll to volunteerForm
 $('.showVolunteerForm').click(function(){
-  $('#slideVolunteer').addClass('active');
-  $('#slideSchool').removeClass('active');
-  $('html, body').animate({scrollTop: $("#formVolunteer").offset().top}, 2000);
-  $(".content-2").css("padding-bottom", "30px");
+  $("#school").css("display", "none");
+  $("#volunteer").css("display", "block");
+  $('html, body').animate({scrollTop: $("#formVolunteer").offset().top}, 1000);
 });
 
 // Scroll to schoolForm
 $('.showSchoolForm').click(function(){
-  $('#slideSchool').addClass('active');
-  $('#slideVolunteer').removeClass('active');
-  $('html, body').animate({scrollTop: $("#formSchool").offset().top}, 2000);
-  $(".content-2").css("padding-bottom", "30px");
+  $("#volunteer").css("display", "none");
+  $("#school").css("display", "block");
+  $('html, body').animate({scrollTop: $("#formSchool").offset().top}, 1000);
+});
+
+// Close Form
+$('.closeForm').click(function(){
+  $("#volunteer").hide("slow");
+  $("#school").hide("slow");
 });

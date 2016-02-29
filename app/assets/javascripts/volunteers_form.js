@@ -1,7 +1,7 @@
 if($('.content-2') && $('.content-2').length > 0){
 
   $("#submitVolunteer").on('click',function() {
-    
+
     $contact_form = $('#formVolunteer');
     var fields = $contact_form.serialize();
     $.ajax({
@@ -14,7 +14,9 @@ if($('.content-2') && $('.content-2').length > 0){
         if(response.status){
           $('#formVolunteer input').val('');
         }
-        alert("Mensagem enviada com sucesso!");
+        $(".sucessfulSignup").css("display", "block");
+        // $('.sucessfulSignup').animate({"right": '50%', "margin-right": ($('.sucessfulSignup').width()/2) + 'px' });
+        $('.sucessfulSignup').animate({"right": '0%'}, 1000);
       }
     });
     return false;

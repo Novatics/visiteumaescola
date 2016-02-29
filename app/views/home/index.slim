@@ -178,7 +178,6 @@
       </div>
     </div>
   </div>
-    
 </secton>
 
 /--How it works Frame--/
@@ -257,126 +256,162 @@
   </div>
 </section>
 
-/-- Users Form--/
-<div id="users_form" class="carousel slide content-2" data-wrap="false" data-interval="false" data-ride="carousel">
-  / <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item" id="slideVolunteer">
-      <div class="content-28">
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1">
-                      <p><b>CADASTRO DE VOLUNTÁRIO</b></p>
-                      <a class="btn form" href="#users_form" role="button" data-slide="next" id="toSchool"><b>IR PARA ESCOLA</b> ></a>
-                  </div>
-              </div>
-          </div>
-      </div>
+/-- Volunteer Form--/
+<section class="content-2" id="volunteer">
+  <div class="sucessfulSignup"> 
+    <div class="content-62 bg-thanks">
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-            <form id="formVolunteer" method="post">
-              <div class="field">
-                <label for="volunteer_name" class="control-label">nome</label> 
-                <input id="volunteer_name" class="form-control" type="text" name="name" value=""></input>
-              </div>
-              <div class="field">
-                <label for="volunteer_email" class="control-label">e-mail</label> 
-                <input id="volunteer_email" class="form-control" type="email" name="email" value=""></input>
-              </div>
-              <div class="field">
-                <label for="volunteer_phone" class="control-label">telefone</label> 
-                <input id="volunteer_phone" class="form-control" type="text" name="phone" value=""></input>
-              </div>
-              <div class="field">  
-                <legend>posso ajudar</legend>
-                <input type="checkbox" name="skills[]" value="conserto" id="first_checkbox"> consertos e instalações<br>
-                <input type="checkbox" name="skills[]" value="monitoria"> monitoria e reforço<br>
-                <input type="checkbox" name="skills[]" value="palestra"> palestras e cursos<br>
-                <input type="checkbox" name="skills[]" value="psicologo"> suporte psicológico<br>
-                <input type="checkbox" name="skills[]" value="cultural"> atividades culturais<br>
-                <input type="checkbox" name="skills[]" value="patrocinio"> patrocínio<br>
-              </div>
-            </form>
-            <div class="btns">
-              <button type="button" id="submitVolunteer" class="btn">enviar meu cadastro!</button>
-            </div>  
+          <h1>nós acreditamos que<br/>
+                  'pequenas ações podem causar
+          </h1>
+          <h2>
+            '<b>GRANDES IMPACTOS</b>
+          </h2>
           </div>
         </div>
       </div>
     </div>
-    <div class="item" id="slideSchool">
-      <div class="content-28">
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1">
-                      <p><b>CADASTRO DE ESCOLA</b></p>
-                      <a class="btn form" href="#users_form" role="button" data-slide="prev" id="toVolunteer" ><b>IR PARA VOLUNTÁRIO</b> ></a>
-                  </div>
-              </div>
-          </div>
-      </div>
+    <div class="content-29">
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-            <form id="formSchool" method="post">
-              <div class="field">
-                <label for="school_name" class="control-label">nome</label> 
-                <input id="school_name" class="form-control" type="text" name="name" value=""></input>
-              </div>
-              <div class="field">
-                <label for="school_email" class="control-label">e-mail</label> 
-                <input id="school_email" class="form-control" type="email" name="email" value=""></input>
-              </div>
-              <div class="field">
-                <label for="school_phone" class="control-label">telefone</label> 
-                <input id="school_phone" class="form-control" type="text" name="phone" value=""></input>
-              </div>
-              <div class="field">  
-                <legend>posso ajudar</legend>
-                <input type="checkbox" name="needs[]" value="conserto" id="first_checkbox"> consertos e instalações<br>
-                <input type="checkbox" name="needs[]" value="monitoria"> monitoria e reforço<br>
-                <input type="checkbox" name="needs[]" value="palestra"> palestras e cursos<br>
-                <input type="checkbox" name="needs[]" value="psicologo"> suporte psicológico<br>
-                <input type="checkbox" name="needs[]" value="cultural"> atividades culturais<br>
-                <input type="checkbox" name="needs[]" value="patrocinio"> patrocínio<br>
-              </div>
-            </form>
-            <div class="btns">
-              <button type="button" id="submitSchool" class="btn">enviar meu cadastro!</button>
-            </div>  
+              <p>muito obrigado pela sua participação!</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="content-28">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <p><b>CADASTRO DE VOLUNTÁRIO</b></p>
+            <a class="btn form closeForm">&times</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <form id="formVolunteer" method="post">
+          <div class="field">
+            <label for="volunteer_name" class="control-label">nome</label> 
+            <input id="volunteer_name" class="form-control" type="text" name="name" value=""></input>
+          </div>
+          <div class="field">
+            <label for="volunteer_email" class="control-label">e-mail</label> 
+            <input id="volunteer_email" class="form-control" type="email" name="email" value=""></input>
+          </div>
+          <div class="field">
+            <label for="volunteer_phone" class="control-label">telefone</label> 
+            <input id="volunteer_phone" class="form-control" type="text" name="phone" value=""></input>
+          </div>
+          <div class="field">  
+            <legend>posso ajudar</legend>
+            <input type="checkbox" name="skills[]" value="conserto" id="first_checkbox"> consertos e instalações<br>
+            <input type="checkbox" name="skills[]" value="monitoria"> monitoria e reforço<br>
+            <input type="checkbox" name="skills[]" value="palestra"> palestras e cursos<br>
+            <input type="checkbox" name="skills[]" value="psicologo"> suporte psicológico<br>
+            <input type="checkbox" name="skills[]" value="cultural"> atividades culturais<br>
+            <input type="checkbox" name="skills[]" value="patrocinio"> patrocínio<br>
+          </div>
+          <div class="field">
+            <label for="school_comments" class="control-label">comentários</label> 
+            <textarea id="school_comments" class="form-control" type="text" name="comments" value=""></textarea>
+          </div>
+        </form>
+        <div class="btns">
+          <button type="button" id="submitVolunteer" class="btn">enviar meu cadastro!</button>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+
+/-- School Form--/
+<section class="content-2" id="school">
+  <div class="sucessfulSignup"> 
+    <div class="content-62 bg-thanks">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+          <h1>nós acreditamos que<br/>
+                  'pequenas ações podem causar
+          </h1>
+          <h2>
+            '<b>GRANDES IMPACTOS</b>
+          </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-29">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+              <p>muito obrigado pela sua participação!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-28">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <p><b>CADASTRO DE ESCOLA</b></p>
+            <a class="btn form closeForm">&times</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <form id="formSchool" method="post">
+          <div class="field">
+            <label for="school_name" class="control-label">nome da escola</label> 
+            <input id="school_name" class="form-control" type="text" name="name" value=""></input>
+          </div>
+          <div class="field">
+            <label for="school_address" class="control-label">endereço da escola</label> 
+            <input id="school_address" class="form-control" type="text" name="address" value=""></input>
+          </div>
+          <div class="field">
+            <label for="school_email" class="control-label">e-mail</label> 
+            <input id="school_email" class="form-control" type="email" name="email" value=""></input>
+          </div>
+          <div class="field">
+            <label for="school_phone" class="control-label">telefone</label> 
+            <input id="school_phone" class="form-control" type="text" name="phone" value=""></input>
+          </div>
+          <div class="field">  
+            <legend>necessidades</legend>
+            <input type="checkbox" name="needs[]" value="conserto" id="first_checkbox"> consertos e instalações<br>
+            <input type="checkbox" name="needs[]" value="monitoria"> monitoria e reforço<br>
+            <input type="checkbox" name="needs[]" value="palestra"> palestras e cursos<br>
+            <input type="checkbox" name="needs[]" value="psicologo"> suporte psicológico<br>
+            <input type="checkbox" name="needs[]" value="cultural"> atividades culturais<br>
+            <input type="checkbox" name="needs[]" value="patrocinio"> patrocínio<br>
+          </div>
+          <div class="field">
+            <label for="school_comments" class="control-label">comentários</label> 
+            <textarea id="school_comments" class="form-control" type="text" name="comments" value=""></textarea>
+          </div>
+        </form>
+        <div class="btns">
+          <button type="button" id="submitSchool" class="btn">enviar meu cadastro!</button>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
 
 /--Thanks Frame--/
 <section>
-  / <div class="content-62 bg-thanks">
-  /   <div class="container">
-  /     <div class="row">
-  /       <div class="col-sm-10 col-sm-offset-1">
-  /       <h1>nós acreditamos que<br/>
-  /               'pequenas ações podem causar
-  /       </h1>
-  /       <h2>
-  /         '<b>GRANDES IMPACTOS</b>
-  /       </h2>
-  /       </div>
-  /     </div>
-  /   </div>
-  / </div>
-  / <div class="content-29">
-  /   <div class="container">
-  /     <div class="row">
-  /       <div class="col-sm-10 col-sm-offset-1">
-  /           <p>muito obrigado pela sua participação!</p>
-  /       </div>
-  /     </div>
-  /   </div>
-  / </div>
   <div class="content-30 bg-darkblue">
     <div class="container">
       <div class="row">
