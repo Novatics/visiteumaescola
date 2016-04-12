@@ -1,84 +1,42 @@
-.header-2
-  z-index: 100
-  left: 0
-  top: 0
-  width: 100%
-  padding-top: 0
-  padding-bottom: 0
-  > .container
-    position: relative
-  .navbar
-    position: absolute
-    z-index: 2
-    top: 55px
-    &.navbar-fixed-top
-      position: fixed
-    .brand
-      font-size: 25px
-      font-weight: normal
-      color: #ffffff
-      font-weight: 800
-      img:first-child
-        float: left
-        margin: -10px 15px 0 0
-    .nav > li
-      margin-left: 35px
-      &:first-child
-        margin-left: 0
-      > a
-        padding: 32px 0 30px
-        font-size: 17px
-        font-weight: normal
-        font-weight: 500
-        letter-spacing: 1px
-        color: #ffffff
-        &:hover, &:focus, &.active
-          color: #506e8c
-      &.active > a
-        color: #506e8c
-        &:hover, &:focus, &.active
-          color: #405870
-
-.header-2-sub
+.hero
   z-index: 50
   left: 0
   width: 100%
   position: relative
-  padding-top: 190px
-  padding-bottom: 190px
   color: white
   text-align: center
+  .overlay
+    padding-top: 190px
+    padding-bottom: 190px
+    width: 100%
+    height: 100%
+    background: rgba(0,0,0,0.40)
   .hero-unit
     margin: 0
     padding: 0
     background: transparent
     h1
-      margin: 0 0 18px
+      margin-top: 30px
+      margin-bottom: 30px
       font-size: 30px
       font-family: 'Source Sans Pro', sans-serif
       font-weight: normal
-      color: #003344
+      color: white
       font-weight: 300
       line-height: 40px
-    p
-      font-size: 13px
-      font-weight: normal
-      color: #506e8c
-      font-weight: 800
-      letter-spacing: 2px
   a
-    color: #E2E2E2
+    color: white
     font-size: 17px
     font-family: 'Source Sans Pro', sans-serif
     &:hover, &:focus, &.active
-      color: #E2E2E2
+      color: #f79433
 
   .btns
     display: inline-block
     margin-top: 15px
     .btn
       &:hover
-        background-color: #FF5500
+        background-color: white
       min-width: 160px
       float: left
       + .btn
@@ -97,27 +55,27 @@
       &:active, &.active
         background-color: #a33025
     &.btn-volunteer
-      background-color: #003344
+      background-color: $primary-color
       border-radius: 2px
     &.btn-school
-      background-color: #003344
+      background-color: $primary-color
       border-radius: 2px
 
 @media (min-width: 980px)
-  .header-2-sub
+  .hero
     height: 100vh
 
 @media (min-width: 768px)
-  .header-2-sub
+  .overlay
     padding-top: 240px
 
 @media (max-width: 480px)
-  .header-2-sub .btns
+  .hero .btns
     margin-top: 48px
     display: block
 
 @media (max-width: 480px)
-  .header-2-sub .btns .btn
+  .hero .btns .btn
     float: none
     display: block
     margin-top: 10px
@@ -125,5 +83,5 @@
       margin-top: 0
 
 @media (max-width: 480px)
-  .header-2-sub .btns .btn + .btn
+  .hero .btns .btn + .btn
     margin-left: 0
