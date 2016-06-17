@@ -20,8 +20,7 @@ label {
   margin:0 10px;
 }
 
-.section {
-}
+.section {}
 
 .section h2 {
   text-transform: uppercase;
@@ -81,6 +80,95 @@ label {
   height:10px;
   top:8px; left:3px;
   transform: rotate(-40deg);
+}
+
+input[type=range] {}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #EEE;
+  border:none;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 0px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background: #01897e;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #EEE;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #EEE;
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+input[type=range]::-moz-range-thumb {
+  border: 0px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background: #01897e;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 6px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 39px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #EEE;
+  border: 0px solid #000101;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #EEE;
+  border: 0px solid #000101;
+  border-radius: 50px;
+}
+
+input[type=range]::-ms-thumb {
+  border: 0px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background: #01897e;
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #EEE;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #EEE;
 }
 
 /* table style
@@ -691,6 +779,20 @@ label {
   display: block;
   outline: none;
   background-color:#FFF;
+}
+
+.section.register .steps_container .range span {
+  font-size:20px;
+  margin:0 20px;
+}
+
+.section.register .steps_container .range {
+  text-align: center;
+  margin:0 auto 40px;
+}
+
+.section.register .steps_container .range input[type=range] {
+  width:480px;
 }
 
 .section.register .steps_container .checkgroup .text input[type=text]{}
