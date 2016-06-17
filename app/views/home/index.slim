@@ -1,426 +1,986 @@
-/--Home Page Frame--/
-<section class="hero bg-home">
-    <div class="overlay">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-md-offset-3">
-            == image_tag("logo_visite.png")
+    <div id="header">
+      <div class="max_width">
+        = image_tag "logo_header.png", :class => "visite_logo"
+        <div class="menu clear">
+          <div class="buttons">
+            <a href="#">posso ajudar!</a>
+            <a href="#">cadastrar escola</a>
           </div>
+
+          <ul>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Por quê?</a></li>
+            <li><a href="#">Como?</a></li>
+          </ul>
         </div>
+      </div>
+    </div>
+
+    <section class="section hero">
+      
+      = image_tag "logo_visite.png", :class => "logo"
+
+      <p class="first_legend">Promovemos o encontro entre escolas e pessoas dispostas a ajudar.</p>
+      <p class="last_legend">Porque uma boa educação depende de <b>todos nós.</b></p>
+
+      <div class="buttons">
+        <a href="#">posso ajudar!</a>
+        <a href="#">cadastrar escola</a>
+      </div>
+    </section>
+
+    <section class="section about">
+      <h2>Sobre o projeto</h2>
+
+      <div class="steps clear">
+        <div class="step necessity">
+          <div class="icon">
+            = image_tag "about_handsup.png"
+          </div>
+          <p class="legend"> necessidades </p>
+        </div>
+
+        <div class="step plus">
+          <div class="icon">
+            = image_tag "about_plus.png"
+          </div>
+          <p class="legend"> combinamos escolas e voluntários </p>
+        </div>
+
+        <div class="step skills">
+          <div class="icon">
+            = image_tag "about_school.png"
+
+          </div>
+          <p class="legend"> habilidades </p>
+        </div>
+
+        <div class="step arrow">
+          <div class="icon">
+            = image_tag "about_arrow.png"
+          </div>
+          <p class="legend"> ações </p>
+        </div>
+
+        <div class="step community">
+          <div class="icon">
+            = image_tag "about_avatar.png"
+          </div>
+          <p class="legend"> comunidade mais engajada na educação </p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>Cruzamos o nosso cadastro de habilidades dos voluntários com o de necessidades das escolas.</p>
+        <p>Com esse encontro, as ações de voluntariado criam engajamento na comunidade e propiciam o desenvolvimento da educação.</p>
+      </footer>
+    </section>
+
+    <section class="section why">
+      <header class="why_header">
+        <h2>Por que a educação precisa da sua ajuda?</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      </header>
+
+      <div class="statistics clear">
+        <article class="state graph1">
+          <header>
+            <p>Brasil é um dos <b>10 piores</b> em rendimento escolar</p>
+          </header>
+          <div class="graph">
+            = image_tag "why_graph1.png"
+          </div>
+          <footer>
+            <p>Entre 64 países analisados pela OCDE, o Brasil ficou entre os 10 piores</p>
+            <small>Fonte: EBC</small>
+          </footer>
+        </article>
+
+        <article class="state graph2">
+          <header>
+            <p>A <b>infraestrutura</b> das escolas públicas brasileiras é <b>precária</b> e <b>insuficiente</b></p>
+          </header>
+          <div class="graph">
+            = image_tag "why_graph2.png"
+          </div>
+          <footer>
+            <p>Somente 8% as escolas públicas brasileira possuem laboratório de ciências e apenas 30% delas contam com biblioteca</p>
+            <small>Fonte: QEDU</small>
+          </footer>
+        </article>
+
+        <article class="state graph3">
+          <header>
+            <p>Somente <b>8% os brasileiros</b> dominam português e matemática</p>
+          </header>
+          <div class="graph">
+            = image_tag "why_graph3.png"
+          </div>
+          <footer>
+            <ul class="graph_list_state">
+              <li>
+                <span class="percent" style="color:#F79433">4%</span> analfabeto
+              </li>
+              <li>
+                <span class="percent" style="color:#FAC145">23%</span> rudimentar
+              </li>
+              <li>
+                <span class="percent" style="color:#00A99D">42%</span> elementar
+              </li>
+              <li>
+                <span class="percent" style="color:#005F59">23%</span> intermediário
+              </li>
+              <li>
+                <span class="percent" style="color:#643654">8%</span> proficiente
+              </li>
+            </ul>
+            <small>Fonte: EBC</small>
+          </footer>
+        </article>
+      </div>
+
+      <footer class="footer_message">
+        <p>Vivamus sagittis lacus vel algue laoreet</p>
+        <p>Rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros velit aliquet.</p>
+      </footer>
+    </section>
+
+    <section class="section how">
+      <header>
+        <h2>Como você pode ajudar?</h2>
+        <p>É possível ajudar de diversas maneiras de acordo com suas habilidades e disponibilidade de tempo.</p>
+      </header>
+
+      <div class="grid_activities">
+
         <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
-            <h1>Promovemos o encontro entre escolas</br>
-                'e pessoas dispostas a ajudar.</br>
-                'Porque uma boa educação depende de <b>todos nós</b>.</h1>
-            <div class="btns">
-              <a class="btn btn-volunteer showVolunteerForm">posso ajudar!</a>
-              <a class="btn btn-school showSchoolForm">cadastrar escola</a>
+          <div class="centralize">
+            <div class="cell esportes">
+              <span>Atividades esportivas</span>
+            </div>
+            <div class="cell cultura">
+              <span>Atividades culturais e artísticas</span>
+            </div>
+            <div class="cell reforco">
+              <span>Monitoria e reforço</span>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-</section>
 
-/--About project Frame--/
-<section class="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-12">
-        <h1>
-          'SOBRE O PROJETO
-        </h1>
+        <div class="row">
+          <div class="centralize">
+            <div class="cell reparos">
+              <span>Reparos e instalações</span>
+            </div>
+            <div class="cell palestras">
+              <span>Palestras e cursos</span>
+            </div>
+            <div class="cell saude">
+              <span>Saúde e alimentação</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="centralize">
+            <div class="cell psicopedagogico">
+              <span>Suporte psicopedagógico</span>
+            </div>
+            <div class="cell doacao">
+              <span>Patrocínio e doação</span>
+            </div>
+            <div class="cell mais">
+              <span>E muito mais!</span>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 col-xs-12">
-        == image_tag("handsup.png")
-        <p>necessidades</p>
-      </div>
-      <div class="col-md-2 col-xs-12">
-        <p>
-          'combinamos escolas e voluntários
+    </section>
+
+    <section class="section register">
+      <header>
+        <h2>Vamos lá!</h2>
+        <h3>Minha escolha precisa de ajuda:</h3>
+
+        <div class="steps_menu clear">
+          <spam>Dados da escola</spam>
+          <spam>Perfil</spam>
+          <spam>Contato</spam>
+          <spam class="active">Necessidades</spam>
+        </div>
+
+      </header>
+
+      <form id="voluntary_from" class="steps_container checkboxes">
+        
+        <div class="step personally hide">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" name="" placeholder="Nome completo" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="" placeholder="Celular" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" name="" placeholder="E-mail" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="" placeholder="Telefone" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <select name="uf" required>
+                <option>UF</option>
+                <option>UF</option>
+                <option>UF</option>
+              </select>
+            </div>
+            <div class="col-md-5">
+              <input type="text" name="" placeholder="Cidade" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="" placeholder="Bairro" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10">
+              <input type="text" name="" placeholder="Endereço" required>
+            </div>
+            <div class="col-md-2">
+              <input type="text" name="" placeholder="Número" required>
+            </div>
+          </div>
+        </div>
+        <div class="step skills hide">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          <div class="base_800">
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>atividades esportivas</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais modalidades?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>atividades culturais e artisticas</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais atividades?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>monitoria e reforço</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais disciplinas?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>reparos e instalações</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais especialidades?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>palestras e cursos</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais temas?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>saúde e alimentação</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais modalidades?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>suporte psicopedagógico</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais suportes?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>patrocínio e doações</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="especifique">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>outras atividades</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="especifique">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step preferences hide">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>crianças</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>deficientes auditivos</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>professores</label>
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>adolescentes</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>deficientes visuais</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>funcionários</label>
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>alunos adultos</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>deficientes físicos</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>famílias</label>
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>alunos idosos</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>deficientes intelectuais</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>bebês</label>
+            </div>
+          </div>
+        </div>
+        <div class="step availability">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <div class="range">
+            <input type="range" name="points" min="0" max="120">
+          </div>
+
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table_style base_800">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>2ª Feira</th>
+                    <th>3ª Feira</th>
+                    <th>4ª Feira</th>
+                    <th>5ª Feira</th>
+                    <th>6ª Feira</th>
+                    <th>sábado</th>
+                    <th>domingo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="bold">manhã</td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bold">tarde</td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bold">noite</td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="submit_setep">
+          <input type="submit" value="finalizar cadastro">
+        </div>
+      </form>
+
+      <!-- Formulário da escola -->
+      <form id="school_from" class="steps_container checkboxes hide">
+        
+        <div class="step basic_data hide">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" name="" placeholder="Nome da escola" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="" placeholder="Sigla" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <input type="text" name="" placeholder="E-mail da escola" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="" placeholder="Telefone da escola" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <select name="uf" required>
+                <option>UF</option>
+                <option>UF</option>
+                <option>UF</option>
+              </select>
+            </div>
+            <div class="col-md-5">
+              <input type="text" name="" placeholder="Cidade" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="" placeholder="Bairro" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-10">
+              <input type="text" name="" placeholder="Endereço" required>
+            </div>
+            <div class="col-md-2">
+              <input type="text" name="" placeholder="Número" required>
+            </div>
+          </div>
+        </div>
+        <div class="step profile hide">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table_style base_800">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>2ª Feira</th>
+                    <th>3ª Feira</th>
+                    <th>4ª Feira</th>
+                    <th>5ª Feira</th>
+                    <th>6ª Feira</th>
+                    <th>sábado</th>
+                    <th>domingo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="bold">manhã</td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bold">tarde</td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="bold">noite</td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                    <td class="align_center">
+                      <input type="checkbox" name="">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>berçário</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>ensino fundamental</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>línguas estrangeiras</label>
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>maternal</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>ensino superior</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>escola esportiva</label>
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>jardim de infãcia</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>formação técnica</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>escola artistica</label>
+            </div>
+          </div>
+
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>crianças</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>deficientes auditivos</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>professores</label>
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>adolescentes</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>deficientes visuais</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>funcionários</label>
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>alunos adultos</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>deficientes físicos</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>famílias</label>
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>alunos idosos</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>deficientes intelectuais</label>
+            </div>
+            <div class="col-md-4">
+              <input type="checkbox" name="">
+              <label>bebês</label>
+            </div>
+          </div>
+        </div>
+        <div class="step contact hide">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          <div class="row base_800">
+            <div class="col-md-7">
+              <input type="text" name="" placeholder="seu nome completo">
+            </div>
+            <div class="col-md-5">
+              <input type="text" name="" placeholder="seu cargo/relação com a escola">
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-7">
+              <input type="text" name="" placeholder="seu e-mail">
+            </div>
+            <div class="col-md-5">
+              <input type="text" name="" placeholder="seu telefone">
+            </div>
+          </div>
+
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          
+
+          <div class="row base_800">
+            <div class="col-md-12">
+              <p class="left margin_none">
+                <input type="checkbox" name="">
+                <label>Sou o responsável administrativo pela instituição de ensino</label>
+              </p>
+            </div>
+          </div>
+
+          <div class="row base_800">
+            <div class="col-md-7">
+              <input type="text" name="" placeholder="nome do responsável">
+            </div>
+            <div class="col-md-5">
+              <input type="text" name="" placeholder="cargo do responsável na escola">
+            </div>
+          </div>
+          <div class="row base_800">
+            <div class="col-md-7">
+              <input type="text" name="" placeholder="e-mail do responsável">
+            </div>
+            <div class="col-md-5">
+              <input type="text" name="" placeholder="telefone do responsável">
+            </div>
+          </div>
+        </div>
+        <div class="step necessities hide">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>atividades esportivas</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="quais modalidades?">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>atividades culturais e artisticas</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="quais atividades?">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>monitoria e reforço</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="quais disciplinas?">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>reparos e instalações</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="quais especialidades?">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>palestras e cursos</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="quais temas?">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>saúde e alimentação</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="quais modalidades?">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>suporte psicopedagógico</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="quais suportes?">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>patrocínio e doações</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="especifique">
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="checkgroup clear">
+              <div class="check">
+                <input type="checkbox" name="">
+                <label>outras atividades</label>
+              </div>
+              <div class="text">
+                <input type="text" name="" placeholder="especifique">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="submit_setep">
+          <input type="submit" value="finalizar cadastro">
+        </div>
+      </form>
+    </section>
+
+    <footer id="footer">
+      <div class="max_width">
+        <div class="row footer_container">
+          <div class="menus">
+            <ul>
+              <li><a href="#">Quero ajudar</a></li>
+              <li><a href="#">Quero cadastrar escola</a></li>
+            </ul>
+
+            <ul>
+              <li><a href="#">Sobre o projeto</a></li>
+              <li><a href="#">Como ajudar</a></li>
+              <li><a href="#">Por que ajudar</a></li>
+            </ul>
+
+            <ul>
+              <li><a href="#">Contato</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+          </div>
+          <div class="box_social_media">
+            
+          </div>
+        </div>
+        <p class="copyright">
+          2016 Visite uma escola - Desenvolvido por <a href="#">Novatics</a>
         </p>
-        == image_tag("plus.png")
       </div>
-      <div class="col-md-3 col-xs-12">
-        == image_tag("school.png")
-        <p>habilidades</p>
-      </div>
-      <div class="col-md-1 col-xs-12">
-        <p>
-          'ações
-        </p>
-        == image_tag("right.png")
-      </div>
-      <div class="col-md-3 col-xs-12">
-        == image_tag("avatar.png")
-        <p>comunidade mais engajada na educação</p>
-      </div>
-    </div>
-    <div class="row">
-      <p>
-        'Cruzamos o nosso cadastro de habilidades dos voluntários com o de</br>
-        'necessidades das escolas.</br>
-        'Com esse encontro, as ações de voluntariado criam engajamento na</br>
-        'comunidade e propiciam o desenvolvimento da educação.
-      </p>
-    </div>
-  </div>
-</section>
-
-/--Infograph--/
-<section class="content-23">
-  <div class="content-27">
-    <div class="container">
-      <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-              <p><b>POR QUE FAZEMOS ESSE PROJETO?</b></p>
-          </div>
-      </div>
-    </div>
-  </div>
-  <div class="content-26">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-2 col-sm-offset-1">
-            <h1><b>3º</b></h1>
-        </div>
-        <div class="col-sm-8">
-            <p>no ranking para porcentagem<br/>de gastos públicos com<br/>educação</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content-31">
-    <div class="features">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5 col-sm-offset-1">
-            == image_tag("slice1.png")
-          </div>
-          <div class="col-sm-5">
-            == image_tag("slice2.png")
-          </div>
-          <div class="col-sm-10 col-sm-offset-3">
-              <h6>O Brasil está atrás da Nova Zelândia e<br/>
-                'do México, que investem <b>18,4%</b> de seus<br/>
-                'gastos públicos em educação.</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content-25">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-2 col-sm-offset-1">
-            <h1><b>33º</b></h1>
-        </div>
-        <div class="col-sm-8">
-            <p>no ranking para gastos por<br/>estudante</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content-31">
-    <div class="features">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="col-sm-2 col-sm-offset-2">
-              == image_tag("estudante1.png")
-            </div>
-            <div class="col-sm-2">
-              <h5><b>US$3.066,00</b><br/>por estudante</h5>
-            </div>
-            <div class="col-sm-2">
-              == image_tag("estudante2.png")
-            </div>
-            <div class="col-sm-3">
-              <h5><b>US$9.487,00</b><br/>por estudante</h5>
-              <p>Média da OECD- Organização para cooperação e<br/>Desenvolvimento Econômico.</p>
-            </div>
-          </div>
-          <div class="col-sm-10 col-sm-offset-3">
-              <h6>O Brasil está na frente somente da<br/>
-                'Indonésia, que investe <b>US$ 625,00</b></h6>
-          </div>
-        </div>
-      </div>
-    </div>  
-  </div>
-  <div class="content-26">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-2 col-sm-offset-1">
-            <h1><b>59º</b></h1>
-        </div>
-        <div class="col-sm-8">
-            <p>no ranking do programa<br/>internacional de avaliação de<br/>alunos em matemática (PISA)</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content-31">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-3">
-            <h6>Em primeiro lugar está Singapura,<br/>
-              'seguida da China e da Coreia do Sul. Na<br/>
-              'última posição está Gana. Os últimos 15<br/>
-              'lugares são ocupados principalmente por<br/>
-              'países sul-americanos.</h6>
-        </div>
-      </div>
-    </div>
-  </div>
-</secton>
-
-/--How it works Frame--/
-<section class="content-20 bg-darkblue">
-  == image_tag("infografico.png")
-</section>
-
-/--How to Help--/
-<section class="content-22 bg-white">
-  <div class="content-28">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-            <p><b>COMO VOCÊ PODE AJUDAR?</b></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
-      <h1>É possível ajudar de diversas maneiras, de<br/>
-              'acordo com suas habilidades e<br/>
-              'disponibilidade de tempo.</h1>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-2 col-sm-offset-2">
-        == image_tag("conserto.png")
-        <h6>consertos e instalações</h6>
-      </div>
-      <div class="col-sm-2">
-        == image_tag("palestra.png")
-        <h6>palestras e <br/>cursos</h6>
-      </div>
-      <div class="col-sm-2">
-        == image_tag("monitoria.png")
-        <h6>monitoria e <br/>reforço</h6>
-      </div>
-      <div class="col-sm-2">
-        == image_tag("pedagogico.png")
-        <h6>suporte <br/>psico-pedagógico</h6>
-      </div>
-      <div class="col-sm-2 col-sm-offset-3">
-        == image_tag("cultura.png")
-        <h6>atividades <br/>culturais</h6>
-      </div>
-      <div class="col-sm-2">
-        == image_tag("patrocinio.png")
-        <h6>patrocínios</h6>
-      </div>
-      <div class="col-sm-2">
-        <h5><b>E muito<br/> mais!</b></h5>
-      </div>
-    </div>
-  </div>
-</section>
-
-/--Sign-up Frame--/
-<section class="content-21 bg-sign-up">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
-        <div class="">
-          <h2><b>Vamos lá!</b><br/>
-          </h2>
-        </div>
-        <div class="btns">
-          <a class="btn btn-volunteer showVolunteerForm">me voluntariar</a>
-          <a class="btn btn-school showSchoolForm">cadastrar minha escola</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-/-- Volunteer Form--/
-<section class="content-2" id="volunteer">
-  <div class="sucessfulSignup"> 
-    <div class="content-62 bg-thanks">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-          <h1>nós acreditamos que<br/>
-                  'pequenas ações podem causar
-          </h1>
-          <h2>
-            '<b>GRANDES IMPACTOS</b>
-          </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-29">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-              <p>muito obrigado pela sua participação!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content-28">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-            <p><b>CADASTRO DE VOLUNTÁRIO</b></p>
-            <a class="btn form closeForm">&times</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
-        <form id="formVolunteer" method="post">
-          <div class="field">
-            <label for="volunteer_name" class="control-label">nome</label> 
-            <input id="volunteer_name" class="form-control" type="text" name="name" value=""></input>
-          </div>
-          <div class="field">
-            <label for="volunteer_email" class="control-label">e-mail</label> 
-            <input id="volunteer_email" class="form-control" type="email" name="email" value=""></input>
-          </div>
-          <div class="field">
-            <label for="volunteer_phone" class="control-label">telefone</label> 
-            <input id="volunteer_phone" class="form-control" type="text" name="phone" value=""></input>
-          </div>
-          <div class="field">  
-            <legend>posso ajudar</legend>
-            <input type="checkbox" name="skills[]" value="conserto" id="first_checkbox"> consertos e instalações<br>
-            <input type="checkbox" name="skills[]" value="monitoria"> monitoria e reforço<br>
-            <input type="checkbox" name="skills[]" value="palestra"> palestras e cursos<br>
-            <input type="checkbox" name="skills[]" value="psicologo"> suporte psicológico<br>
-            <input type="checkbox" name="skills[]" value="cultural"> atividades culturais<br>
-            <input type="checkbox" name="skills[]" value="patrocinio"> patrocínio<br>
-          </div>
-          <div class="field">
-            <label for="school_comments" class="control-label">comentários</label> 
-            <textarea id="school_comments" class="form-control" type="text" name="comments" value=""></textarea>
-          </div>
-        </form>
-        <div class="btns">
-          <button type="button" id="submitVolunteer" class="btn">enviar meu cadastro!</button>
-        </div>  
-      </div>
-    </div>
-  </div>
-</section>
-
-/-- School Form--/
-<section class="content-2" id="school">
-  <div class="sucessfulSignup"> 
-    <div class="content-62 bg-thanks">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-          <h1>nós acreditamos que<br/>
-                  'pequenas ações podem causar
-          </h1>
-          <h2>
-            '<b>GRANDES IMPACTOS</b>
-          </h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="content-29">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-              <p>muito obrigado pela sua participação!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="content-28">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-            <p><b>CADASTRO DE ESCOLA</b></p>
-            <a class="btn form closeForm">&times</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1">
-        <form id="formSchool" method="post">
-          <div class="field">
-            <label for="school_name" class="control-label">nome da escola</label> 
-            <input id="school_name" class="form-control" type="text" name="name" value=""></input>
-          </div>
-          <div class="field">
-            <label for="school_address" class="control-label">endereço da escola</label> 
-            <input id="school_address" class="form-control" type="text" name="address" value=""></input>
-          </div>
-          <div class="field">
-            <label for="school_email" class="control-label">e-mail</label> 
-            <input id="school_email" class="form-control" type="email" name="email" value=""></input>
-          </div>
-          <div class="field">
-            <label for="school_phone" class="control-label">telefone</label> 
-            <input id="school_phone" class="form-control" type="text" name="phone" value=""></input>
-          </div>
-          <div class="field">  
-            <legend>necessidades</legend>
-            <input type="checkbox" name="needs[]" value="conserto" id="first_checkbox"> consertos e instalações<br>
-            <input type="checkbox" name="needs[]" value="monitoria"> monitoria e reforço<br>
-            <input type="checkbox" name="needs[]" value="palestra"> palestras e cursos<br>
-            <input type="checkbox" name="needs[]" value="psicologo"> suporte psicológico<br>
-            <input type="checkbox" name="needs[]" value="cultural"> atividades culturais<br>
-            <input type="checkbox" name="needs[]" value="patrocinio"> patrocínio<br>
-          </div>
-          <div class="field">
-            <label for="school_comments" class="control-label">comentários</label> 
-            <textarea id="school_comments" class="form-control" type="text" name="comments" value=""></textarea>
-          </div>
-        </form>
-        <div class="btns">
-          <button type="button" id="submitSchool" class="btn">enviar meu cadastro!</button>
-        </div>  
-      </div>
-    </div>
-  </div>
-</section>
-
-/--Thanks Frame--/
-<section>
-  <div class="content-30 bg-darkblue">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-          <p>
-            'desenvolvido por
-          </p>
-          <a href="http://www.novatics.com.br">
-            == image_tag("logo-novatics.png")
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </footer>

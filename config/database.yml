@@ -3,7 +3,7 @@ development:
   database: visite_uma_escola_development
   host: localhost
   user: postgres
-  password:
+  password: root
   pool: 5
   timeout: 5000
   template: template0
@@ -13,7 +13,7 @@ test: &test
   database: visite_uma_escola_test
   host: localhost
   user: postgres
-  password:
+  password: root
   pool: 5
   timeout: 5000
   template: template0
@@ -23,7 +23,7 @@ production:
   database: visite_uma_escola_production
   host: localhost
   user: postgres
-  password:
+  password: root
   pool: 5
   timeout: 5000
   template: template0
