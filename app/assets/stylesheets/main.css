@@ -379,8 +379,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .section.about {
   text-align: center;
-  padding:80px 0 100px;
-  border-bottom:10px solid #eee;
+  padding:80px 0 50px;
 }
 
 .section.about h2 {
@@ -457,7 +456,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .section.why {
   text-align: center;
-  padding:80px 0 0;
+  padding:40px 0 0;
 }
 
 .section.why header.why_header{
@@ -646,24 +645,25 @@ input[type=range]:focus::-ms-fill-upper {
 
 .section.register{
   text-align: center;
-  padding:120px 0 0;
+  padding:100px 0 0;
 }
 
 .section.register header {
+  text-align: center;
   margin-bottom:60px;
 }
 
-.section.register header h2 {
+.section.register h2 {
   color:#F89E4D;
   font-size:32px;
   margin-bottom:10px;
 }
 
-.section.register header h3 {
+.section.register h3 {
   color:#999;
   font-weight: normal;
   font-size:20px;
-  margin-bottom:10px;
+  margin-bottom:30px;
 }
 
 .section.register header .steps_menu {
@@ -674,16 +674,16 @@ input[type=range]:focus::-ms-fill-upper {
   padding:20px 0;
 }
 
-.section.register header .steps_menu spam.active { color:#643654; }
+.section.register header .steps_menu span.active { color:#643654; }
 
-.section.register header .steps_menu spam {
+.section.register header .steps_menu span {
   display: inline-block;
   padding:0 50px 0 36px;
   position: relative;
 }
 
-.section.register header .steps_menu spam:not(:last-child):after,
-.section.register header .steps_menu spam:not(:last-child):before {
+.section.register header .steps_menu span:not(:last-child):after,
+.section.register header .steps_menu span:not(:last-child):before {
   content:'';
   width: 14px;
   height: 14px;
@@ -697,12 +697,12 @@ input[type=range]:focus::-ms-fill-upper {
   transform: rotate(45deg);
 }
 
-.section.register header .steps_menu spam:before{
+.section.register header .steps_menu span:before{
   background-color:#4BC2BA;
   right:0;
 }
 
-.section.register header .steps_menu spam:after{
+.section.register header .steps_menu span:after{
   background-color:#FFF;
   right:1px;
 }
@@ -765,6 +765,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .section.register .steps_container select,
+.section.register .steps_container input[type=email],
 .section.register .steps_container input[type=text]{
   width:100%;
   height:42px;
@@ -781,7 +782,7 @@ input[type=range]:focus::-ms-fill-upper {
   background-color:#FFF;
 }
 
-.section.register .steps_container .range span {
+.section.register .steps_container .range span.range_limit {
   font-size:20px;
   margin:0 20px;
 }
@@ -795,13 +796,21 @@ input[type=range]:focus::-ms-fill-upper {
   width:480px;
 }
 
+.section.register .steps_container .range .range_result {
+  text-align: center;
+  padding: 20px 0 0;
+  font-size: 18px;
+}
+
+.section.register .steps_container. .range .range_result b {   }
+
 .section.register .steps_container .checkgroup .text input[type=text]{}
 
 .section.register .steps_container .checkgroup .text input[type=text]:focus{
   border-color:#4BC2BA;
 }
 
-.section.register .steps_container input[type=submit] {
+.section.register .steps_container button {
   color:#FFF;
   font-size:16px;
   background-color:#6ECEC7;
@@ -809,6 +818,17 @@ input[type=range]:focus::-ms-fill-upper {
   border:none;
   border-radius:3px;
   cursor:pointer;
+  outline: none;
+}
+
+.section.register .register_success {
+
+}
+
+.section.register .register_success p {
+  color: #F89E4D;
+  font-size: 39px;
+  margin-bottom: 10px;
 }
 
 .section.register .steps_container .submit_setep{

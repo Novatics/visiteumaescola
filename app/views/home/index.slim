@@ -3,8 +3,8 @@
         = image_tag "logo_header.png", :class => "visite_logo"
         <div class="menu clear">
           <div class="buttons">
-            <a href="#">posso ajudar!</a>
-            <a href="#">cadastrar escola</a>
+            <a href="#register" data-form-action="voluntary_from">posso ajudar!</a>
+            <a href="#register" data-form-action="school_from">cadastrar escola</a>
           </div>
 
           <ul>
@@ -24,8 +24,8 @@
       <p class="last_legend">Porque uma boa educação depende de <b>todos nós.</b></p>
 
       <div class="buttons">
-        <a href="#">posso ajudar!</a>
-        <a href="#">cadastrar escola</a>
+        <a href="#register" data-form-action="voluntary_from">posso ajudar!</a>
+        <a href="#register" data-form-action="school_from">cadastrar escola</a>
       </div>
     </section>
 
@@ -199,47 +199,80 @@
     </section>
 
     <section class="section register">
-      <header>
+
+      <header id="register_header">
         <h2>Vamos lá!</h2>
-        <h3>Minha escolha precisa de ajuda:</h3>
-
-        <div class="steps_menu clear">
-          <spam>Dados da escola</spam>
-          <spam>Perfil</spam>
-          <spam>Contato</spam>
-          <spam class="active">Necessidades</spam>
-        </div>
-
+        <h3 id="register_title">Minha escolha precisa de ajuda:</h3>
       </header>
 
-      <form id="voluntary_from" class="steps_container checkboxes">
-        
-        <div class="step personally hide">
+      <div id="register_message" class="register_success hide">
+        <p>Sua escola foi cadastrada com sucesso!</p>
+      </div>
+
+      <a id="l_register" name="register"></a>
+
+      <!-- Formulário do voluntário -->
+      <form id="voluntary_from" name="voluntary" class="steps_container checkboxes" data-success="O voluntário foi cadastrado com sucesso!">
+        <header>
+          <div class="steps_menu clear">
+            <span data-tab="personally">Dados pessoais</span>
+            <span data-tab="skills">Habilidades</span>
+            <span data-tab="preferences">Preferências</span>
+            <span data-tab="availability">Disponibilidade</span>
+          </div>
+        </header>
+
+        <div class="step personally">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           <div class="row">
             <div class="col-md-8">
-              <input type="text" name="" placeholder="Nome completo" required>
+              <input type="text" name="name" placeholder="Nome completo" required>
             </div>
             <div class="col-md-4">
-              <input type="text" name="" placeholder="Celular" required>
+              <input type="text" name="cellphone" placeholder="Celular" required>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-8">
-              <input type="text" name="" placeholder="E-mail" required>
+              <input type="email" name="email" placeholder="E-mail" required>
             </div>
             <div class="col-md-4">
-              <input type="text" name="" placeholder="Telefone" required>
+              <input type="text" name="phone" placeholder="Telefone" required>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-3">
               <select name="uf" required>
-                <option>UF</option>
-                <option>UF</option>
-                <option>UF</option>
+                <option value="">UF</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
               </select>
             </div>
             <div class="col-md-5">
@@ -259,7 +292,8 @@
             </div>
           </div>
         </div>
-        <div class="step skills hide">
+
+        <div class="step skills">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           
           <div class="base_800">
@@ -372,7 +406,8 @@
             </div>
           </div>
         </div>
-        <div class="step preferences hide">
+
+        <div class="step preferences">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           
           <div class="row base_800">
@@ -432,12 +467,16 @@
             </div>
           </div>
         </div>
+
         <div class="step availability">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           <div class="range">
-            <span>0 km</span>
-            <input type="range" name="points" min="0" max="120">
-            <span>120 km</span>
+            <span class="range_limit">0 km</span>
+            <input type="range" name="points" min="0" max="120" class="input_range">
+            <span class="range_limit">120km</span>
+            <div class="range_result">
+              <span>0</span>km
+            </div>
           </div>
 
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
@@ -537,14 +576,23 @@
         </div>
 
         <div class="submit_setep">
-          <input type="submit" value="finalizar cadastro">
+          <button type="button">continuar</button>
+          <button type="submit">finalizar cadastro</button>
         </div>
       </form>
 
       <!-- Formulário da escola -->
-      <form id="school_from" class="steps_container checkboxes hide">
-        
-        <div class="step basic_data hide">
+      <form id="school_from" name="school" class="steps_container checkboxes" data-success="Sua escola foi cadastrada com sucesso!">
+        <header>
+          <div class="steps_menu clear">
+            <span data-tab="basic_data">Dados da escola</span>
+            <span data-tab="profile">Perfil</span>
+            <span data-tab="contact">Contato</span>
+            <span data-tab="necessities">Necessidades</span>
+          </div>
+        </header>
+
+        <div class="step basic_data">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           <div class="row">
             <div class="col-md-8">
@@ -567,9 +615,34 @@
           <div class="row">
             <div class="col-md-3">
               <select name="uf" required>
-                <option>UF</option>
-                <option>UF</option>
-                <option>UF</option>
+                <option value="">UF</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
               </select>
             </div>
             <div class="col-md-5">
@@ -589,7 +662,8 @@
             </div>
           </div>
         </div>
-        <div class="step profile hide">
+
+        <div class="step profile">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           
           <div class="row">
@@ -789,7 +863,8 @@
             </div>
           </div>
         </div>
-        <div class="step contact hide">
+
+        <div class="step contact">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           
           <div class="row base_800">
@@ -839,120 +914,124 @@
             </div>
           </div>
         </div>
-        <div class="step necessities hide">
+
+        <div class="step necessities">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>atividades esportivas</label>
-              </div>
-              <div class="text">
-                <input type="text" name="" placeholder="quais modalidades?">
-              </div>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>atividades culturais e artisticas</label>
-              </div>
-              <div class="text">
-                <input type="text" name="" placeholder="quais atividades?">
+          <div class="base_800">
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>atividades esportivas</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais modalidades?">
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>monitoria e reforço</label>
-              </div>
-              <div class="text">
-                <input type="text" name="" placeholder="quais disciplinas?">
-              </div>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>reparos e instalações</label>
-              </div>
-              <div class="text">
-                <input type="text" name="" placeholder="quais especialidades?">
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>atividades culturais e artisticas</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais atividades?">
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>palestras e cursos</label>
-              </div>
-              <div class="text">
-                <input type="text" name="" placeholder="quais temas?">
-              </div>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>saúde e alimentação</label>
-              </div>
-              <div class="text">
-                <input type="text" name="" placeholder="quais modalidades?">
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>monitoria e reforço</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais disciplinas?">
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>suporte psicopedagógico</label>
-              </div>
-              <div class="text">
-                <input type="text" name="" placeholder="quais suportes?">
-              </div>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>patrocínio e doações</label>
-              </div>
-              <div class="text">
-                <input type="text" name="" placeholder="especifique">
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>reparos e instalações</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais especialidades?">
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div class="row">
-            <div class="checkgroup clear">
-              <div class="check">
-                <input type="checkbox" name="">
-                <label>outras atividades</label>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>palestras e cursos</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais temas?">
+                </div>
               </div>
-              <div class="text">
-                <input type="text" name="" placeholder="especifique">
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>saúde e alimentação</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais modalidades?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>suporte psicopedagógico</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="quais suportes?">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>patrocínio e doações</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="especifique">
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="checkgroup clear">
+                <div class="check">
+                  <input type="checkbox" name="">
+                  <label>outras atividades</label>
+                </div>
+                <div class="text">
+                  <input type="text" name="" placeholder="especifique">
+                </div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div class="submit_setep">
-          <input type="submit" value="finalizar cadastro">
+          <button type="button">continuar</button>
+          <button type="submit">finalizar cadastro</button>
         </div>
       </form>
     </section>
@@ -982,7 +1061,7 @@
           </div>
         </div>
         <p class="copyright">
-          2016 Visite uma escola - Desenvolvido por <a href="#">Novatics</a>
+          Copyright &copy; 2016 Visite uma Escola - desenvolvido por <a href="#">Novatics</a>
         </p>
       </div>
     </footer>
