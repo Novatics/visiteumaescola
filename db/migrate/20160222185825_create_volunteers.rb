@@ -27,7 +27,7 @@ class CreateVolunteers < ActiveRecord::Migration
       t.boolean :preference_blind
       t.boolean :preference_disable
       t.boolean :preference_physical_disable
-      t.boolean :prefenrece_teacher
+      t.boolean :preference_teacher
       t.boolean :preference_employee
       t.boolean :preference_family
       t.boolean :preference_baby
