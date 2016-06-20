@@ -146,7 +146,8 @@
       var tab =  { 
         tabs: menu,
         current: -1,
-        isLastStep: false
+        isLastStep: false,
+        isLastButOneStep: false
       };
 
       for (var i = 0; i < menu.length; i++) {
@@ -166,6 +167,24 @@
       show(messageElement);
     }
 
+    function validator() {
+      var tabInfo = getTabInfo();
+      var sectionName = tabInfo.tabs[tabInfo.current].getAttribute('data-tab');
+      var activeSection = activeForm.querySelector('.step.'+sectionName);
+      var requireds = activeSection.querySelectorAll('[required]');
+      var message = [];
+
+      for (var i = 0; i < requireds.length; i++) {
+        if(!requireds[i].value) {
+          if(requireds[i].getAttribute('placeholder')) {
+            message.push(requireds[i].getAttribute('placeholder') + ' é obrigatório.');
+          }
+        }
+      }
+
+      return message;
+    }
+
     function useTab(index) {
       var attrName = activeMenuByIndex(index);
       loadContainerByName(attrName);
@@ -180,6 +199,13 @@
     }
 
     function onNextStep(e) {
+      var errors = validator();
+
+      if(errors.length) {
+        alert(errors.join("\n"));
+        return;
+      }
+
       var tabInfo = getTabInfo();
       var nextStep = tabInfo.current + 1;
 
@@ -211,6 +237,10 @@
       hide(activeForm);
       hide(registerHeader);
       showSucessMessage();
+    }
+
+    function validadeForm() {
+
     }
 
     function configure() {
@@ -251,8 +281,13 @@
 
 
       switch(activeForm.getAttribute('name')) {
-        case 'voluntary': titleElement.innerHTML = voluntaryTitle; break;
-        case 'school': titleElement.innerHTML = schoolTitle; break;
+        case 'voluntary': 
+          titleElement.innerHTML = voluntaryTitle; 
+          break;
+
+        case 'school': 
+          titleElement.innerHTML = schoolTitle; 
+          break;
       }
 
 
