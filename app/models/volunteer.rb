@@ -5,6 +5,6 @@ class Volunteer < ActiveRecord::Base
                   :preference_teenager, :preference_adult, :preference_elderly, :preference_deaf,
                   :preference_blind, :preference_disable, :preference_physical_disable, :preference_teacher,
                   :preference_employee, :preference_family, :preference_baby
-                  
+  serialize :skills
   validates :name, :email, presence: true
 end
