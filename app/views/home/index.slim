@@ -596,25 +596,25 @@
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
           <div class="row">
             <div class="col-md-8">
-              <input type="text" name="" placeholder="Nome da escola" required>
+              <input type="text" name="name" placeholder="Nome da escola" required>
             </div>
             <div class="col-md-4">
-              <input type="text" name="" placeholder="Sigla">
+              <input type="text" name="abbreviation" placeholder="Sigla">
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-8">
-              <input type="text" name="" placeholder="E-mail da escola" required>
+              <input type="text" name="email" placeholder="E-mail da escola" required>
             </div>
             <div class="col-md-4">
-              <input type="text" name="" placeholder="Telefone da escola" required>
+              <input type="text" name="phone" placeholder="Telefone da escola" required>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-3">
-              <select name="uf" placeholder="UF da escola" required>
+              <select name="state" placeholder="UF da escola" required>
                 <option value="">UF</option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
@@ -646,19 +646,19 @@
               </select>
             </div>
             <div class="col-md-5">
-              <input type="text" name="" placeholder="Cidade" required>
+              <input type="text" name="city" placeholder="Cidade" required>
             </div>
             <div class="col-md-4">
-              <input type="text" name="" placeholder="Bairro" required>
+              <input type="text" name="neighbourhood" placeholder="Bairro" required>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-10">
-              <input type="text" name="" placeholder="Endereço" required>
+              <input type="text" name="address" placeholder="Endereço" required>
             </div>
             <div class="col-md-2">
-              <input type="text" name="" placeholder="Número" required>
+              <input type="text" name="number" placeholder="Número" required>
             </div>
           </div>
         </div>
@@ -685,73 +685,73 @@
                   <tr>
                     <td class="bold">manhã</td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="monday" name="morning[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="tuesday" name="morning[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="wednesday" name="morning[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="thursday" name="morning[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="friday" name="morning[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="saturday" name="morning[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="sunday" name="morning[]">
                     </td>
                   </tr>
                   <tr>
                     <td class="bold">tarde</td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="monday" name="afternoon[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="tuesday" name="afternoon[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="wednesday" name="afternoon[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="thursday" name="afternoon[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="friday" name="afternoon[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="saturday" name="afternoon[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="sunday" name="afternoon[]">
                     </td>
                   </tr>
                   <tr>
                     <td class="bold">noite</td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="monday" name="night[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="tuesday" name="night[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="wednesday" name="night[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="thursday" name="night[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="friday" name="night[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="saturday" name="night[]">
                     </td>
                     <td class="align_center">
-                      <input type="checkbox" name="">
+                      <input type="checkbox" value="sunday" name="night[]">
                     </td>
                   </tr>
                 </tbody>
@@ -763,43 +763,43 @@
           
           <div class="row base_800">
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_nursery">
               <label>berçário</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_elementary">
               <label>ensino fundamental</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_language">
               <label>línguas estrangeiras</label>
             </div>
           </div>
           <div class="row base_800">
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_daycare">
               <label>maternal</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_college">
               <label>ensino superior</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_sport">
               <label>escola esportiva</label>
             </div>
           </div>
           <div class="row base_800">
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_kindergarten">
               <label>jardim de infãcia</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_technician">
               <label>formação técnica</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_art">
               <label>escola artistica</label>
             </div>
           </div>
@@ -808,57 +808,57 @@
           
           <div class="row base_800">
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_kid">
               <label>crianças</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_deaf">
               <label>deficientes auditivos</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_teacher">
               <label>professores</label>
             </div>
           </div>
           <div class="row base_800">
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_teenager">
               <label>adolescentes</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_blind">
               <label>deficientes visuais</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_employee">
               <label>funcionários</label>
             </div>
           </div>
           <div class="row base_800">
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_adult">
               <label>alunos adultos</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_physical_disable">
               <label>deficientes físicos</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_family">
               <label>famílias</label>
             </div>
           </div>
           <div class="row base_800">
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_elderly">
               <label>alunos idosos</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_disable">
               <label>deficientes intelectuais</label>
             </div>
             <div class="col-md-4">
-              <input type="checkbox" name="">
+              <input type="checkbox" name="profile_baby">
               <label>bebês</label>
             </div>
           </div>
@@ -869,18 +869,18 @@
           
           <div class="row base_800">
             <div class="col-md-7">
-              <input type="text" name="" placeholder="seu nome completo" required>
+              <input type="text" name="contact_name" placeholder="seu nome completo" required>
             </div>
             <div class="col-md-5">
-              <input type="text" name="" placeholder="seu cargo/relação com a escola" required>
+              <input type="text" name="contact_position" placeholder="seu cargo/relação com a escola" required>
             </div>
           </div>
           <div class="row base_800">
             <div class="col-md-7">
-              <input type="text" name="" placeholder="seu e-mail" required>
+              <input type="text" name="contact_email" placeholder="seu e-mail" required>
             </div>
             <div class="col-md-5">
-              <input type="text" name="" placeholder="seu telefone" required>
+              <input type="text" name="contact_phone" placeholder="seu telefone" required>
             </div>
           </div>
 
@@ -899,18 +899,18 @@
 
           <div class="row base_800">
             <div class="col-md-7">
-              <input type="text" name="" placeholder="nome do responsável" required>
+              <input type="text" name="contact_name_responsible" placeholder="nome do responsável" required>
             </div>
             <div class="col-md-5">
-              <input type="text" name="" placeholder="cargo do responsável na escola" required>
+              <input type="text" name="contact_position_responsible" placeholder="cargo do responsável na escola" required>
             </div>
           </div>
           <div class="row base_800">
             <div class="col-md-7">
-              <input type="text" name="" placeholder="e-mail do responsável" required>
+              <input type="text" name="contact_email_responsible" placeholder="e-mail do responsável" required>
             </div>
             <div class="col-md-5">
-              <input type="text" name="" placeholder="telefone do responsável" required>
+              <input type="text" name="contact_phone_responsible" placeholder="telefone do responsável" required>
             </div>
           </div>
         </div>
@@ -926,7 +926,7 @@
                   <label>atividades esportivas</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="quais modalidades?">
+                  <input type="text" name="need_sport" placeholder="quais modalidades?">
                 </div>
               </div>
             </div>
@@ -938,7 +938,7 @@
                   <label>atividades culturais e artisticas</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="quais atividades?">
+                  <input type="text" name="need_culture" placeholder="quais atividades?">
                 </div>
               </div>
             </div>
@@ -950,7 +950,7 @@
                   <label>monitoria e reforço</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="quais disciplinas?">
+                  <input type="text" name="need_monitoring" placeholder="quais disciplinas?">
                 </div>
               </div>
             </div>
@@ -962,7 +962,7 @@
                   <label>reparos e instalações</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="quais especialidades?">
+                  <input type="text" name="need_repairs" placeholder="quais especialidades?">
                 </div>
               </div>
             </div>
@@ -974,7 +974,7 @@
                   <label>palestras e cursos</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="quais temas?">
+                  <input type="text" name="need_courses" placeholder="quais temas?">
                 </div>
               </div>
             </div>
@@ -986,7 +986,7 @@
                   <label>saúde e alimentação</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="quais modalidades?">
+                  <input type="text" name="need_health" placeholder="quais modalidades?">
                 </div>
               </div>
             </div>
@@ -998,7 +998,7 @@
                   <label>suporte psicopedagógico</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="quais suportes?">
+                  <input type="text" name="need_psycho" placeholder="quais suportes?">
                 </div>
               </div>
             </div>
@@ -1010,7 +1010,7 @@
                   <label>patrocínio e doações</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="especifique">
+                  <input type="text" name="need_donations" placeholder="especifique">
                 </div>
               </div>
             </div>
@@ -1022,7 +1022,7 @@
                   <label>outras atividades</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="" placeholder="especifique">
+                  <input type="text" name="need_others" placeholder="especifique">
                 </div>
               </div>
             </div>
