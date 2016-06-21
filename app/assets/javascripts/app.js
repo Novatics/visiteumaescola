@@ -297,7 +297,6 @@
       nextButton.onclick = onNextStep;
       submitButton.onclick = onSubmitForm;
 
-
       switch(activeForm.getAttribute('name')) {
         case 'voluntary':
           titleElement.innerHTML = voluntaryTitle;
