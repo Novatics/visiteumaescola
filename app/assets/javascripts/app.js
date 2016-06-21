@@ -278,7 +278,6 @@
     // prepare... (constructor)
     (function() {
       configure();
-      titleElement.innerHTML =
 
       // hide
       hideAllFroms();
