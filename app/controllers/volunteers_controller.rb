@@ -19,7 +19,21 @@ class VolunteersController < ApplicationController
                                   preference_teacher: params[:preference_teacher],
                                   preference_employee: params[:preference_employee],
                                   preference_family: params[:preference_family],
-                                  preference_baby: params[:preference_baby]
+                                  preference_baby: params[:preference_baby],
+                                  points: params[:points]
+
+    params[:morning].each_with_index do |element,index|
+      VolunteerAvailability.create!(day: element, shift: 'morning', volunteer: volunteer.id)
+    end
+
+    params[:afternoon].each_with_index do |element,index|
+      VolunteerAvailability.create!(day: element, shift: 'afternoon', volunteer: volunteer.id)
+    end
+
+    params[:night].each_with_index do |element,index|
+      VolunteerAvailability.create!(day: element, shift: 'night', volunteer: volunteer.id)
+    end
+
     if(volunteer == nil)
       render json: { status: 'error' }
     else

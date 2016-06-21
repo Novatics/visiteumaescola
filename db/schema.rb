@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225175147) do
+ActiveRecord::Schema.define(version: 20160621014902) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -96,6 +96,14 @@ ActiveRecord::Schema.define(version: 20160225175147) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["role_id"], name: "index_users_on_role_id", using: :btree
 
+  create_table "volunteer_availabilities", force: :cascade do |t|
+    t.string   "day"
+    t.string   "shift"
+    t.integer  "volunteer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "volunteer_profiles", force: :cascade do |t|
     t.string   "skills"
     t.datetime "created_at", null: false
@@ -132,10 +140,11 @@ ActiveRecord::Schema.define(version: 20160225175147) do
     t.boolean  "preference_blind"
     t.boolean  "preference_disable"
     t.boolean  "preference_physical_disable"
-    t.boolean  "prefenrece_teacher"
+    t.boolean  "preference_teacher"
     t.boolean  "preference_employee"
     t.boolean  "preference_family"
     t.boolean  "preference_baby"
+    t.integer  "points"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
   end

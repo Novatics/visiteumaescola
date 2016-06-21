@@ -31,6 +31,7 @@ class CreateVolunteers < ActiveRecord::Migration
       t.boolean :preference_employee
       t.boolean :preference_family
       t.boolean :preference_baby
+      t.integer :points
       t.timestamps null: false
     end
   end

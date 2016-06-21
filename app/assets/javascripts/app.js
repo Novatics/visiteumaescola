@@ -1,4 +1,4 @@
-(function(global){
+(function(global, $){
 
   'use strict';
 
@@ -54,8 +54,8 @@
       var fakeCheck = document.createElement('div');
 
       fakeCheck.classList.add(CHECKBOX_CLASSNAME);
-      
-      if(element.checked) 
+
+      if(element.checked)
         fakeCheck.classList.add(CHECKED_CLASSNAME);
 
       checkContainer.insertBefore(fakeCheck, element);
@@ -67,7 +67,7 @@
     // prepare inputs
     for (var i = 0; i < inputs.length; i++) {
       var check = inputs[i].parentNode.parentNode.querySelector('.check input');
-      
+
       if(!check.checked)
         inputs[i].classList.add('hide');
     }
@@ -75,7 +75,7 @@
     function onChangeCheckbox() {
       var checkbox = this.nextSibling;
       var inputText = this.parentNode.parentNode.querySelector('.text input');
-      
+
       // toggle
       if(checkbox.checked) {
         this.classList.remove('checked');
@@ -143,7 +143,7 @@
 
     function getTabInfo() {
       var menu = activeForm.querySelectorAll('.steps_menu span');
-      var tab =  { 
+      var tab =  {
         tabs: menu,
         current: -1,
         isLastStep: false,
@@ -219,11 +219,38 @@
 
     function onSubmitForm(e) {
       var data = activeForm.elements;
+      // var formJSON = {};
       e.preventDefault();
 
-      for (var i = 0; i < data.length; i++) {
-        console.log(data[i].name, data[i].value);
+      var $contact_form = $(activeForm);
+      var fields = $contact_form.serialize();
+      var url = '/new';
+
+      if($contact_form.attr('name') == 'voluntary'){
+        url = '/volunteers'+url;
+      }else{
+        url = '/schools'+url;
       }
+
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: fields,
+        dataType: 'json',
+        success: function(response) {
+
+          if(response.status){
+            showSucessMessage();
+          }
+        }
+      });
+
+      // for (var i = 0; i < data.length; i++) {
+      //
+      //   formJSON[data[i].name] = data[i].value;
+      //   console.log(data[i].name, data[i].value);
+      // }
+      // console.log(formJSON);
 
       // var xhttp = new XMLHttpRequest();
       // xhttp.onreadystatechange = function() {
@@ -232,8 +259,8 @@
       //   }
       // };
 
-      // xhttp.open("POST", "ajax_info.txt", true);
-      // xhttp.send();
+      // xhttp.send(formJSON);
+
       hide(activeForm);
       hide(registerHeader);
       showSucessMessage();
@@ -260,7 +287,7 @@
     // prepare...
     (function() {
       configure();
-      titleElement.innerHTML = 
+      titleElement.innerHTML =
 
       // hide
       hideAllFroms();
@@ -281,12 +308,12 @@
 
 
       switch(activeForm.getAttribute('name')) {
-        case 'voluntary': 
-          titleElement.innerHTML = voluntaryTitle; 
+        case 'voluntary':
+          titleElement.innerHTML = voluntaryTitle;
           break;
 
-        case 'school': 
-          titleElement.innerHTML = schoolTitle; 
+        case 'school':
+          titleElement.innerHTML = schoolTitle;
           break;
       }
 
@@ -294,4 +321,4 @@
     }());
   }
 
-}(window));
+}(window, jQuery));
