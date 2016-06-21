@@ -557,7 +557,9 @@ input[type=range]:focus::-ms-fill-upper {
 .section.why .footer_message {
   color:#FFF;
   text-transform: uppercase;
-  background-color:#F5BD44;
+  background-image: url("section_why.png");
+  background-size: cover;
+  background-position: bottom;
   padding:50px 0;
 }
 
