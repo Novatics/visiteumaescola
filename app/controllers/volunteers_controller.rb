@@ -22,16 +22,22 @@ class VolunteersController < ApplicationController
                                   preference_baby: params[:preference_baby],
                                   points: params[:points]
 
-    params[:morning].each_with_index do |element,index|
-      VolunteerAvailability.create!(day: element, shift: 'morning', volunteer: volunteer.id)
+    if params[:morning]
+      params[:morning].each_with_index do |element,index|
+        VolunteerAvailability.create!(day: element, shift: 'morning', volunteer: volunteer.id)
+      end
     end
 
-    params[:afternoon].each_with_index do |element,index|
-      VolunteerAvailability.create!(day: element, shift: 'afternoon', volunteer: volunteer.id)
+    if params[:afternoon]
+      params[:afternoon].each_with_index do |element,index|
+        VolunteerAvailability.create!(day: element, shift: 'afternoon', volunteer: volunteer.id)
+      end
     end
 
-    params[:night].each_with_index do |element,index|
-      VolunteerAvailability.create!(day: element, shift: 'night', volunteer: volunteer.id)
+    if params[:night]
+      params[:night].each_with_index do |element,index|
+        VolunteerAvailability.create!(day: element, shift: 'night', volunteer: volunteer.id)
+      end
     end
 
     if(volunteer == nil)
