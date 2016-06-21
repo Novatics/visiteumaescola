@@ -34,16 +34,22 @@ class SchoolsController < ApplicationController
                             need_psycho: params[:need_psycho], need_donations: params[:need_donations],
                             need_others: params[:need_others]
 
-    params[:morning].each_with_index do |element,index|
-      SchoolAvailability.create!(day: element, shift: 'morning', school: school.id)
+    if params[:morning]
+        params[:morning].each_with_index do |element,index|
+          SchoolAvailability.create!(day: element, shift: 'morning', school: school.id)
+        end
     end
 
-    params[:afternoon].each_with_index do |element,index|
-      SchoolAvailability.create!(day: element, shift: 'afternoon', school: school.id)
+    if params[:afternoon]
+        params[:afternoon].each_with_index do |element,index|
+          SchoolAvailability.create!(day: element, shift: 'afternoon', school: school.id)
+        end
     end
 
-    params[:night].each_with_index do |element,index|
-      SchoolAvailability.create!(day: element, shift: 'night', school: school.id)
+    if params[:night]
+        params[:night].each_with_index do |element,index|
+          SchoolAvailability.create!(day: element, shift: 'night', school: school.id)
+        end
     end
 
     if(school == nil)
