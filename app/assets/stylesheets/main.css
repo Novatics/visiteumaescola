@@ -617,17 +617,26 @@ input[type=range]:focus::-ms-fill-upper {
   text-align: left;
 }
 
-.section.how .grid_activities .cell.esportes { background-color:#75C0BB; }
-.section.how .grid_activities .cell.cultura { background-color:#B47D46; }
-.section.how .grid_activities .cell.reforco { background-color:#77546B; }
+.section.how .grid_activities .cell.esportes { background-image: url("sport.png");
+                                               background-size: cover;}
+.section.how .grid_activities .cell.cultura { background-image: url("culture.png");
+                                               background-size: cover; }
+.section.how .grid_activities .cell.reforco { background-image: url("mentoring.png");
+                                               background-size: cover; }
 
-.section.how .grid_activities .cell.reparos { background-color:#BB9850; }
-.section.how .grid_activities .cell.palestras { background-color:#DD934A; }
-.section.how .grid_activities .cell.saude { background-color:#7BC7C2; }
+.section.how .grid_activities .cell.reparos { background-image: url("repairs.png");
+                                               background-size: cover; }
+.section.how .grid_activities .cell.palestras { background-image: url("talks.png");
+                                               background-size: cover; }
+.section.how .grid_activities .cell.saude { background-image: url("health.png");
+                                               background-size: cover; }
 
-.section.how .grid_activities .cell.psicopedagogico { background-color:#ECC265; }
-.section.how .grid_activities .cell.doacao { background-color:#714E65; }
-.section.how .grid_activities .cell.mais { background-color:#3BB9B0; }
+.section.how .grid_activities .cell.psicopedagogico { background-image: url("psycho.png");
+                                               background-size: cover; }
+.section.how .grid_activities .cell.doacao { background-image: url("sponsor.png");
+                                               background-size: cover; }
+.section.how .grid_activities .cell.mais { background-image: url("more.png");
+                                               background-size: cover; }
 
 .section.how .grid_activities .cell span{
   width:180px;
