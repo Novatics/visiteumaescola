@@ -10,10 +10,11 @@
   var CHECKED_CLASSNAME = 'checked';
   var LOCATION_REGISTER = 'l_register';
 
+  // Scroll go to
   var goTo = function(location) {
     var location = document.getElementById(location);
     var headerHeight = document.getElementById('header').offsetHeight;
-    //global.scrollTo(0, location.offsetTop - headerHeight);
+
     $('body').animate({ 
       scrollTop: (location.offsetTop - headerHeight)},
       300
@@ -37,6 +38,7 @@
 
   });
 
+  // Stylize range input form
   function stylizeRange() {
     var ranges = document.querySelectorAll('input.input_range');
     for (var i = 0; i < ranges.length; i++) {
@@ -53,7 +55,7 @@
     }
   }
 
-  // stylize form
+  // Stylize checkbox form
   function stylizeForm() {
     var checks = document.querySelectorAll('.checkboxes input[type=checkbox]');
     var inputs = document.querySelectorAll('.checkgroup .text input');
@@ -178,6 +180,7 @@
       show(messageElement);
     }
 
+    // validade form to next steps
     function validator() {
       var tabInfo = getTabInfo();
       var sectionName = tabInfo.tabs[tabInfo.current].getAttribute('data-tab');
@@ -196,19 +199,23 @@
       return message;
     }
 
+    // execute tabs by index
     function useTab(index) {
       var attrName = activeMenuByIndex(index);
       loadContainerByName(attrName);
     }
 
+    // show an element
     function show(el) {
       return $(el).show();
     }
 
+    // hide an element
     function hide(el) {
       return $(el).hide();
     }
 
+    // event to next step
     function onNextStep(e) {
       var errors = validator();
 
@@ -228,28 +235,22 @@
       useTab(nextStep);
     }
 
+    // event to submit form
     function onSubmitForm(e) {
       var data = activeForm.elements;
-      // var formJSON = {};
-      e.preventDefault();
-
       var $contact_form = $(activeForm);
       var fields = $contact_form.serialize();
-      var url = '/new';
+      var url = ($contact_form.attr('name') == 'voluntary')
+              ? url = '/volunteers' : url = '/schools';
 
-      if($contact_form.attr('name') == 'voluntary'){
-        url = '/volunteers'+url;
-      }else{
-        url = '/schools'+url;
-      }
+      e.preventDefault();
 
       $.ajax({
         type: "POST",
-        url: url,
+        url: url + '/new',
         data: fields,
         dataType: 'json',
         success: function(response) {
-
           if(response.status){
             showSucessMessage();
           }
@@ -258,10 +259,6 @@
 
       hide(activeForm);
       hide(registerHeader);
-    }
-
-    function validadeForm() {
-
     }
 
     function configure() {
@@ -278,7 +275,7 @@
       }
     }
 
-    // prepare...
+    // prepare... (constructor)
     (function() {
       configure();
       titleElement.innerHTML =
@@ -311,8 +308,6 @@
           break;
       }
 
-
     }());
   }
-
 }(window, jQuery));
