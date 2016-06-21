@@ -13,7 +13,11 @@
   var goTo = function(location) {
     var location = document.getElementById(location);
     var headerHeight = document.getElementById('header').offsetHeight;
-    global.scrollTo(0, location.offsetTop - headerHeight);
+    //global.scrollTo(0, location.offsetTop - headerHeight);
+    $('body').animate({ 
+      scrollTop: (location.offsetTop - headerHeight)},
+      300
+    );
   };
 
   // ready
@@ -24,6 +28,13 @@
     initTab({
       formPriority : document.getElementById('voluntary_from')
     });
+
+    // scroll to...
+    $('[data-scroll-to]').on('click', function(e){
+      e.preventDefault();
+      goTo(this.getAttribute('data-scroll-to'));
+    });
+
   });
 
   function stylizeRange() {
@@ -133,7 +144,7 @@
       var steps = activeForm.querySelectorAll('.step');
       for (var i = 0; i < steps.length; i++) {
         if(steps[i].classList.contains(name)) {
-          show(steps[i]);
+          hide(steps[i]).fadeIn(500);
         }
         else {
           hide(steps[i]);
@@ -191,11 +202,11 @@
     }
 
     function show(el) {
-      el.classList.remove('hide');
+      return $(el).show();
     }
 
     function hide(el) {
-      el.classList.add('hide');
+      return $(el).hide();
     }
 
     function onNextStep(e) {
@@ -245,25 +256,8 @@
         }
       });
 
-      // for (var i = 0; i < data.length; i++) {
-      //
-      //   formJSON[data[i].name] = data[i].value;
-      //   console.log(data[i].name, data[i].value);
-      // }
-      // console.log(formJSON);
-
-      // var xhttp = new XMLHttpRequest();
-      // xhttp.onreadystatechange = function() {
-      //   if (xhttp.readyState == 4 && xhttp.status == 200) {
-      //     document.getElementById("demo").innerHTML = xhttp.responseText;
-      //   }
-      // };
-
-      // xhttp.send(formJSON);
-
       hide(activeForm);
       hide(registerHeader);
-      showSucessMessage();
     }
 
     function validadeForm() {
