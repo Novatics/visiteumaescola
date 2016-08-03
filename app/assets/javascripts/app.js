@@ -121,15 +121,25 @@
     var voluntaryTitle = 'Posso ajudar como voluntário:';
     var schoolTitle = 'Minha escola precisa de ajuda:';
 
-    function hideAllFroms() {
+    function hideAllForms() {
       for (var i = 0; i < stepsForms.length; i++) {
         hide(stepsForms[i]);
       }
     }
 
-    function hideStepsForm(fromElement) {
-      for (var i = 0; i < fromElement.length; i++) {
-        hide(fromElement[i]);
+    function resetAllForms() {
+      var tabInfo = getTabInfo();
+
+      for (var i = tabInfo.current; i > tabInfo.current; i--) {
+        for (var j = 0; j < stepsForms.length; j++) {
+          stepsForms[j].reset();
+        }
+      }
+    }
+
+    function hideStepsForm(formElement) {
+      for (var i = 0; i < formElement.length; i++) {
+        hide(formElement[i]);
       }
     }
 
@@ -181,22 +191,23 @@
     }
 
     // validade form to next steps
-    function validator() {
+    function validate() {
       var tabInfo = getTabInfo();
       var sectionName = tabInfo.tabs[tabInfo.current].getAttribute('data-tab');
       var activeSection = activeForm.querySelector('.step.'+sectionName);
       var requireds = activeSection.querySelectorAll('[required]');
-      var message = [];
+      var valid = true;
 
       for (var i = 0; i < requireds.length; i++) {
-        if(!requireds[i].value) {
-          if(requireds[i].getAttribute('placeholder')) {
-            message.push(requireds[i].getAttribute('placeholder') + ' é obrigatório.');
-          }
+        $(requireds[i]).removeClass('has_error');
+
+        if(!requireds[i].value && requireds[i].getAttribute('placeholder')) {
+          valid = false;
+          $(requireds[i]).addClass('has_error');
         }
       }
 
-      return message;
+      return valid;
     }
 
     // execute tabs by index
@@ -217,22 +228,17 @@
 
     // event to next step
     function onNextStep(e) {
-      var errors = validator();
+      if(validate()) {
+        var tabInfo = getTabInfo();
+        var nextStep = tabInfo.current + 1;
 
-      if(errors.length) {
-        alert(errors.join("\n"));
-        return;
+        goTo(LOCATION_REGISTER);
+        if(tabInfo.isLastButOneStep) {
+          hide(nextButton);
+          show(submitButton);
+        }
+        useTab(nextStep);
       }
-
-      var tabInfo = getTabInfo();
-      var nextStep = tabInfo.current + 1;
-
-      goTo(LOCATION_REGISTER);
-      if(tabInfo.isLastButOneStep) {
-        hide(nextButton);
-        show(submitButton);
-      }
-      useTab(nextStep);
     }
 
     // event to submit form
@@ -253,6 +259,7 @@
         success: function(response) {
           if(response.status){
             showSucessMessage();
+            resetAllForms();
           }
         }
       });
@@ -280,7 +287,7 @@
       configure();
 
       // hide
-      hideAllFroms();
+      hideAllForms();
       hide(submitButton);
       hide(messageElement);
 

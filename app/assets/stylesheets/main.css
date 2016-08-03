@@ -568,6 +568,11 @@ input[type=range]:focus::-ms-fill-upper {
   margin-bottom:20px;
 }
 
+.section.why .footer_message p:nth-child(2) {
+  max-width: 800px;
+  font-size:22px;
+  margin: 0 auto 20px;
+}
 
 .section.why .footer_message p:last-child {
   max-width: 800px;
@@ -646,7 +651,7 @@ input[type=range]:focus::-ms-fill-upper {
                                                background-size: cover; }
 
 .section.how .grid_activities .cell span{
-  width:180px;
+  width:200px;
   color:#FFF;
   font-size:28px;
   font-weight: bold;
@@ -761,7 +766,6 @@ input[type=range]:focus::-ms-fill-upper {
 
 .section.register .steps_container .checkgroup {
   line-height:42px;
-  margin-bottom:30px;
 }
 
 .section.register .steps_container .checkgroup .check {
@@ -847,8 +851,14 @@ input[type=range]:focus::-ms-fill-upper {
   margin-bottom: 10px;
 }
 
-.section.register .steps_container .submit_setep{
+.section.register .steps_container .submit_step {
   text-align: center;
+}
+
+.has_error {
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(189,8,28,0.9);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(189,8,28,0.9);
+  box-shadow: 0px 0px 5px 1px rgba(189,8,28,0.9);
 }
 
 /* #4BC2BA */

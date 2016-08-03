@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>A escola <%= @school.name %> se cadastrou!</h1>
+    <p>
+      <%= JSON.pretty_generate(@school.as_json) %><br>
+    </p>
+  </body>
+</html>

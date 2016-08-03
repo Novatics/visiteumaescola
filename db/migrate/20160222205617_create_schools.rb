@@ -10,6 +10,7 @@ class CreateSchools < ActiveRecord::Migration
       t.string  :neighbourhood
       t.string  :address
       t.string  :number
+      t.string  :zipcode
       t.boolean :profile_nursery
       t.boolean :profile_daycare
       t.boolean :profile_kindergarten

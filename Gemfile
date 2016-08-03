@@ -9,6 +9,7 @@ gem 'unicorn'
 gem 'friendly_id'
 gem 'resque'
 gem 'devise'
+gem 'client_side_validations'
 
 # external services
 gem 'newrelic_rpm'

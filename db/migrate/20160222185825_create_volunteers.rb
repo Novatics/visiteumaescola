@@ -10,6 +10,7 @@ class CreateVolunteers < ActiveRecord::Migration
       t.string  :neighbourhood
       t.string  :address
       t.string  :number
+      t.string  :zipcode
       t.string  :skill_sport
       t.string  :skill_culture
       t.string  :skill_monitoring

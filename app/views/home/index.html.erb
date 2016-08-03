@@ -1,6 +1,6 @@
     <div id="header">
       <div class="max_width">
-        = image_tag "logo_header.png", :class => "visite_logo"
+        <%= image_tag "logo_header.png", :class => "visite_logo" %>
         <div class="menu clear">
           <div class="buttons">
             <a href="#register" data-form-action="voluntary_from">posso ajudar!</a>
@@ -18,7 +18,7 @@
 
     <section class="section hero">
       
-      = image_tag "logo_visite.png", :class => "logo"
+      <%= image_tag "logo_visite.png", :class => "logo" %>
 
       <p class="first_legend">Promovemos o encontro entre escolas e pessoas dispostas a ajudar.</p>
       <p class="last_legend">Porque uma boa educação depende de <b>todos nós.</b></p>
@@ -36,36 +36,36 @@
       <div class="steps clear">
         <div class="step necessity">
           <div class="icon">
-            = image_tag "about_handsup.png"
+            <%= image_tag "about_handsup.png" %>
           </div>
-          <p class="legend"> necessidades </p>
+          <p class="legend"> habilidades </p>
         </div>
 
         <div class="step plus">
           <div class="icon">
-            = image_tag "about_plus.png"
+            <%= image_tag "about_plus.png" %>
           </div>
           <p class="legend"> combinamos escolas e voluntários </p>
         </div>
 
         <div class="step skills">
           <div class="icon">
-            = image_tag "about_school.png"
+            <%= image_tag "about_school.png" %>
 
           </div>
-          <p class="legend"> habilidades </p>
+          <p class="legend"> necessidades </p>
         </div>
 
         <div class="step arrow">
           <div class="icon">
-            = image_tag "about_arrow.png"
+            <%= image_tag "about_arrow.png" %>
           </div>
           <p class="legend"> ações </p>
         </div>
 
         <div class="step community">
           <div class="icon">
-            = image_tag "about_avatar.png"
+            <%= image_tag "about_avatar.png" %>
           </div>
           <p class="legend"> comunidade mais engajada na educação </p>
         </div>
@@ -81,7 +81,7 @@
       <a id="l_why" name="about"></a>
       <header class="why_header">
         <h2>Por que a educação precisa da sua ajuda?</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+        <p>Para a maioria dos brasileiros, o acesso a educação pública significa ter que enfrentar infraestrutura e nível de ensino precários. Isso resulta em uma população com baixo índice intelectual. Veja:</p>
       </header>
 
       <div class="statistics clear">
@@ -90,7 +90,7 @@
             <p>Brasil é um dos <b>10 piores</b> em rendimento escolar</p>
           </header>
           <div class="graph">
-            = image_tag "why_graph1.png"
+            <%= image_tag "why_graph1.png" %>
           </div>
           <footer>
             <p>Entre 64 países analisados pela OCDE, o Brasil ficou entre os 10 piores</p>
@@ -103,7 +103,7 @@
             <p>A <b>infraestrutura</b> das escolas públicas brasileiras é <b>precária</b> e <b>insuficiente</b></p>
           </header>
           <div class="graph">
-            = image_tag "why_graph2.png"
+            <%= image_tag "why_graph2.png" %>
           </div>
           <footer>
             <p>Somente 8% as escolas públicas brasileira possuem laboratório de ciências e apenas 30% delas contam com biblioteca</p>
@@ -116,7 +116,7 @@
             <p>Somente <b>8% os brasileiros</b> dominam português e matemática</p>
           </header>
           <div class="graph">
-            = image_tag "why_graph3.png"
+            <%= image_tag "why_graph3.png" %>
           </div>
           <footer>
             <ul class="graph_list_state">
@@ -142,8 +142,9 @@
       </div>
 
       <footer class="footer_message">
-        <p>Vivamus sagittis lacus vel algue laoreet</p>
-        <p>Rutrum faucibus dolor auctor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros velit aliquet.</p>
+        <p>Como podemos melhorar a educação no Brasil?</p>
+        <p>A força da comunidade é a ajuda que as escolas precisam.</p>
+        <p>Com a ajuda de cada indivíduo, uma comunidade engajada consegue grandes realizações.</p>
       </footer>
     </section>
 
@@ -226,7 +227,7 @@
         </header>
 
         <div class="step personally">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Seus dados serão utilizados para selecionar as necessidades compatíveis e serão compartilhados apenas com a escola onde você puder contribuir.</p>
           <div class="row">
             <div class="col-md-8">
               <input type="text" name="name" placeholder="Nome completo" required>
@@ -246,7 +247,25 @@
           </div>
 
           <div class="row">
+            <div class="col-md-6">
+              <input type="text" name="address" placeholder="Endereço">
+            </div>
+            <div class="col-md-2">
+              <input type="text" name="number" placeholder="Número">
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="neighbourhood" placeholder="Bairro">
+            </div>
+          </div>
+
+          <div class="row">
             <div class="col-md-3">
+              <input type="text" name="zipcode" placeholder="CEP">
+            </div>
+            <div class="col-md-5">
+              <input type="text" name="city" placeholder="Cidade" required>
+            </div>
+            <div class="col-md-4">
               <select name="state" placeholder="UF" required>
                 <option value="">UF</option>
                 <option value="AC">Acre</option>
@@ -278,26 +297,12 @@
                 <option value="TO">Tocantins</option>
               </select>
             </div>
-            <div class="col-md-5">
-              <input type="text" name="city" placeholder="Cidade" required>
-            </div>
-            <div class="col-md-4">
-              <input type="text" name="neighbourhood" placeholder="Bairro">
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-10">
-              <input type="text" name="address" placeholder="Endereço">
-            </div>
-            <div class="col-md-2">
-              <input type="text" name="number" placeholder="Número">
-            </div>
+            
           </div>
         </div>
 
         <div class="step skills">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Quais habilidades você pode disponibilizar para as escolas?</p>
           
           <div class="base_800">
             <div class="row">
@@ -307,7 +312,7 @@
                   <label>atividades esportivas</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_sport" placeholder="quais modalidades?">
+                  <input type="text" name="skill_sport" placeholder="quais modalidades? ex.: futebol, judô">
                 </div>
               </div>
             </div>
@@ -319,7 +324,7 @@
                   <label>atividades culturais e artisticas</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_culture" placeholder="quais atividades?">
+                  <input type="text" name="skill_culture" placeholder="quais atividades? ex.: música, teatro">
                 </div>
               </div>
             </div>
@@ -331,7 +336,7 @@
                   <label>monitoria e reforço</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_monitoring" placeholder="quais disciplinas?">
+                  <input type="text" name="skill_monitoring" placeholder="quais disciplinas? ex.: matemática, história">
                 </div>
               </div>
             </div>
@@ -343,7 +348,7 @@
                   <label>reparos e instalações</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_repairs" placeholder="quais especialidades?">
+                  <input type="text" name="skill_repairs" placeholder="quais especialidades? ex.: pintura, elétrica">
                 </div>
               </div>
             </div>
@@ -355,7 +360,7 @@
                   <label>palestras e cursos</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_courses" placeholder="quais temas?">
+                  <input type="text" name="skill_courses" placeholder="quais temas? ex.: tema 1, tema 2">
                 </div>
               </div>
             </div>
@@ -367,7 +372,7 @@
                   <label>saúde e alimentação</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_health" placeholder="quais modalidades?">
+                  <input type="text" name="skill_health" placeholder="quais modalidades? ex.: modalidade 1, modalidade 2">
                 </div>
               </div>
             </div>
@@ -379,7 +384,7 @@
                   <label>suporte psicopedagógico</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_psycho" placeholder="quais suportes?">
+                  <input type="text" name="skill_psycho" placeholder="quais suportes? ex.: acompanhamento, avaliação">
                 </div>
               </div>
             </div>
@@ -391,7 +396,7 @@
                   <label>patrocínio e doações</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_donations" placeholder="especifique">
+                  <input type="text" name="skill_donations" placeholder="que tipo de doações? ex.: material didático, móveis">
                 </div>
               </div>
             </div>
@@ -403,7 +408,7 @@
                   <label>outras atividades</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="skill_others" placeholder="especifique">
+                  <input type="text" name="skill_others" placeholder="que tipo de atividades? ex.: atividade 1, atividade 2">
                 </div>
               </div>
             </div>
@@ -411,7 +416,7 @@
         </div>
 
         <div class="step preferences">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Qual o tipo de público que você tem preferência ao visitar uma escola?</p>
           
           <div class="row base_800">
             <div class="col-md-4">
@@ -472,7 +477,7 @@
         </div>
 
         <div class="step availability">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>A partir do seu endereço cadastrado, qual a distância máxima de uma escola que você pode visitar?</p>
           <div class="range">
             <span class="range_limit">0 km</span>
             <input type="range" name="points" min="0" max="120" class="input_range">
@@ -482,7 +487,7 @@
             </div>
           </div>
 
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Que dias e horários você tem disponibilidade para visitar as escolas?</p>
           
           <div class="row">
             <div class="col-md-12">
@@ -578,7 +583,7 @@
           </div>
         </div>
 
-        <div class="submit_setep">
+        <div class="submit_step">
           <button type="button">continuar</button>
           <button type="submit">finalizar cadastro</button>
         </div>
@@ -596,7 +601,7 @@
         </header>
 
         <div class="step basic_data">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Qual o endereço e a forma de contato com a escola? O endereço será utilizado para se conectar com voluntários da região.</p>
           <div class="row">
             <div class="col-md-8">
               <input type="text" name="name" placeholder="Nome da escola" required>
@@ -616,7 +621,25 @@
           </div>
 
           <div class="row">
+            <div class="col-md-6">
+              <input type="text" name="address" placeholder="Endereço da escola" required>
+            </div>
+            <div class="col-md-2">
+              <input type="text" name="number" placeholder="Número" required>
+            </div>
+            <div class="col-md-4">
+              <input type="text" name="neighbourhood" placeholder="Bairro" required>
+            </div>
+          </div>
+
+          <div class="row">
             <div class="col-md-3">
+              <input type="text" name="zipcode" placeholder="CEP" required>
+            </div>
+            <div class="col-md-5">
+              <input type="text" name="city" placeholder="Cidade" required>
+            </div>
+            <div class="col-md-4">
               <select name="state" placeholder="UF da escola" required>
                 <option value="">UF</option>
                 <option value="AC">Acre</option>
@@ -648,26 +671,13 @@
                 <option value="TO">Tocantins</option>
               </select>
             </div>
-            <div class="col-md-5">
-              <input type="text" name="city" placeholder="Cidade" required>
-            </div>
-            <div class="col-md-4">
-              <input type="text" name="neighbourhood" placeholder="Bairro" required>
-            </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-10">
-              <input type="text" name="address" placeholder="Endereço" required>
-            </div>
-            <div class="col-md-2">
-              <input type="text" name="number" placeholder="Número" required>
-            </div>
-          </div>
+          
         </div>
 
         <div class="step profile">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Que dias e horários a escola tem disponibilidade para receber os voluntários?</p>
           
           <div class="row">
             <div class="col-md-12">
@@ -762,7 +772,7 @@
             </div>
           </div>
 
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Quais níveis de ensino da escola podem receber a atuação de voluntários?</p>
           
           <div class="row base_800">
             <div class="col-md-4">
@@ -795,7 +805,7 @@
           <div class="row base_800">
             <div class="col-md-4">
               <input type="checkbox" name="profile_kindergarten">
-              <label>jardim de infãcia</label>
+              <label>jardim de infância</label>
             </div>
             <div class="col-md-4">
               <input type="checkbox" name="profile_technician">
@@ -803,11 +813,11 @@
             </div>
             <div class="col-md-4">
               <input type="checkbox" name="profile_art">
-              <label>escola artistica</label>
+              <label>escola artística</label>
             </div>
           </div>
 
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Qual o tipo de público da escola pode receber os voluntários?</p>
           
           <div class="row base_800">
             <div class="col-md-4">
@@ -868,7 +878,7 @@
         </div>
 
         <div class="step contact">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Quem será o responsável pela escola? Isso inclui o cadastro de necessidade e a aprovação de voluntários.</p>
           
           <div class="row base_800">
             <div class="col-md-7">
@@ -887,7 +897,7 @@
             </div>
           </div>
 
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Caso haja algum outro responsável por parte da escola, por favor forneça os dados:</p>
           
           
 
@@ -919,7 +929,7 @@
         </div>
 
         <div class="step necessities">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+          <p>Quais as necessidades da escola?</p>
           
           <div class="base_800">
             <div class="row">
@@ -929,7 +939,7 @@
                   <label>atividades esportivas</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_sport" placeholder="quais modalidades?">
+                  <input type="text" name="need_sport" placeholder="quais modalidades? ex.: futebol, judô">
                 </div>
               </div>
             </div>
@@ -941,7 +951,7 @@
                   <label>atividades culturais e artisticas</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_culture" placeholder="quais atividades?">
+                  <input type="text" name="need_culture" placeholder="quais atividades? ex.: música, teatro">
                 </div>
               </div>
             </div>
@@ -953,7 +963,7 @@
                   <label>monitoria e reforço</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_monitoring" placeholder="quais disciplinas?">
+                  <input type="text" name="need_monitoring" placeholder="quais disciplinas? ex.: matemática, português">
                 </div>
               </div>
             </div>
@@ -965,7 +975,7 @@
                   <label>reparos e instalações</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_repairs" placeholder="quais especialidades?">
+                  <input type="text" name="need_repairs" placeholder="quais especialidades? ex.: pintura, elétrica">
                 </div>
               </div>
             </div>
@@ -977,7 +987,7 @@
                   <label>palestras e cursos</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_courses" placeholder="quais temas?">
+                  <input type="text" name="need_courses" placeholder="quais temas? ex.: tema 1, tema 2">
                 </div>
               </div>
             </div>
@@ -989,7 +999,7 @@
                   <label>saúde e alimentação</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_health" placeholder="quais modalidades?">
+                  <input type="text" name="need_health" placeholder="quais modalidades? ex.: modalidade 1, modalidade 2">
                 </div>
               </div>
             </div>
@@ -1001,7 +1011,7 @@
                   <label>suporte psicopedagógico</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_psycho" placeholder="quais suportes?">
+                  <input type="text" name="need_psycho" placeholder="quais suportes? ex.: acompanhamento, avaliação">
                 </div>
               </div>
             </div>
@@ -1013,7 +1023,7 @@
                   <label>patrocínio e doações</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_donations" placeholder="especifique">
+                  <input type="text" name="need_donations" placeholder="que tipo de doações? ex.: material didático, móveis">
                 </div>
               </div>
             </div>
@@ -1025,14 +1035,14 @@
                   <label>outras atividades</label>
                 </div>
                 <div class="text">
-                  <input type="text" name="need_others" placeholder="especifique">
+                  <input type="text" name="need_others" placeholder="que tipo de atividades? ex.: atividade 1, atividade 2">
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="submit_setep">
+        <div class="submit_step">
           <button type="button">continuar</button>
           <button type="submit">finalizar cadastro</button>
         </div>
@@ -1056,17 +1066,17 @@
 
             <ul>
               <li><a href="#">Contato</a></li>
-              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">Brasília aberta</a></li>
             </ul>
           </div>
           <div class="box_social_media">
-            
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fvisiteumaescola%2F&tabs&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
           </div>
         </div>
         <p class="copyright">
           Copyright &copy; 2016 Visite uma Escola - desenvolvido por 
           <a href="http://www.novatics.com.br/" target="_blank">
-            = image_tag "logo_novatics.png", :class => "logo"
+            <%= image_tag "logo_novatics.png", :class => "logo" %>
           </a>
         </p>
       </div>

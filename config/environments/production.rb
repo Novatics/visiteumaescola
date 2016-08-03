@@ -58,6 +58,20 @@ VisiteUmaEscola::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
+  # Configuração ZOHO para envio de email
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address              => ENV['SMTP_ADDRESS'], #smtp.zoho.com
+    :port                 => ENV['SMTP_PORT'], #465
+    :domain               => ENV['SMTP_DOMAIN'], #novatics.com.br
+    :user_name            => ENV['SMTP_USER'], #?@novatics.com.br
+    :password             => ENV['SMTP_PASSWORD'],
+    :authentication       => :login,
+    :ssl                  => true,
+    :tls                  => true,
+    :enable_starttls_auto => true    
+  }
+
   # Enable threaded mode
   #config.threadsafe!
 

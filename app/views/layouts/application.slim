@@ -12,9 +12,9 @@ html.no-js lang="#{I18n.locale}"
   /! <![endif]
 
   head
-    title #{(content_for?(:title) ? "#{yield :title} — " : "") + 'VisiteUmaEscola' }
+    title #{(content_for?(:title) ? "#{yield :title} — " : "") + 'Visite uma Escola' }
     == render 'layouts/metatags'
-    == render 'layouts/favicons'
+    == favicon_link_tag
 
     == csrf_meta_tags
     == stylesheet_link_tag 'application', media: 'all'
