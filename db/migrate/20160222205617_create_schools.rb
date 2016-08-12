@@ -1,16 +1,16 @@
 class CreateSchools < ActiveRecord::Migration
   def change
     create_table :schools do |t|
-      t.string  :name
-      t.string  :email
+      t.string  :name, null: false
+      t.string  :email, null: false
       t.string  :abbreviation
-      t.string  :phone
-      t.string  :state
-      t.string  :city
-      t.string  :neighbourhood
-      t.string  :address
-      t.string  :number
-      t.string  :zipcode
+      t.string  :phone, null: false
+      t.string  :state, null: false
+      t.string  :city, null: false
+      t.string  :neighbourhood, null: false
+      t.string  :address, null: false
+      t.string  :number, null: false
+      t.string  :zipcode, null: false
       t.boolean :profile_nursery
       t.boolean :profile_daycare
       t.boolean :profile_kindergarten
@@ -40,15 +40,16 @@ class CreateSchools < ActiveRecord::Migration
       t.string  :contact_email_responsible
       t.string  :contact_position_responsible
       t.string  :contact_phone_responsible
-      t.string  :need_sport
-      t.string  :need_culture
-      t.string  :need_monitoring
-      t.string  :need_repairs
-      t.string  :need_courses
-      t.string  :need_health
-      t.string  :need_psycho
-      t.string  :need_donations
-      t.string  :need_others
+      t.boolean  :need_sport, default: false
+      t.boolean  :need_culture, default: false
+      t.boolean  :need_monitoring, default: false
+      t.boolean  :need_repairs, default: false
+      t.boolean  :need_courses, default: false
+      t.boolean  :need_health, default: false
+      t.boolean  :need_psycho, default: false
+      t.boolean  :need_donations, default: false
+      t.boolean  :need_others, default: false
+      t.string  :need_detail
 
       t.timestamps null: false
     end

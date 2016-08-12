@@ -47,7 +47,8 @@ class SchoolsController < ApplicationController
                             need_health: params[:need_health],
                             need_psycho: params[:need_psycho],
                             need_donations: params[:need_donations],
-                            need_others: params[:need_others]
+                            need_others: params[:need_others],
+                            need_detail: params[:need_detail]
 
     if params[:morning]
         params[:morning].each_with_index do |element,index|

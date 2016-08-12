@@ -793,17 +793,17 @@
           </div>
 
           <p>Caso haja algum outro responsável por parte da escola, por favor forneça os dados:</p>
-          
-          
 
-          / <div class="row base_800">
-          /   <div class="col-md-12">
-          /     <p class="left margin_none">
-          /       <input type="checkbox" name="">
-          /       <label>Sou o responsável administrativo pela instituição de ensino</label>
-          /     </p>
-          /   </div>
-          / </div>
+          <!--
+            <div class="row base_800">
+              <div class="col-md-12">
+                <p class="left margin_none">
+                  <input type="checkbox" name="">
+                  <label>Sou o responsável administrativo pela instituição de ensino</label>
+                </p>
+              </div>
+            </div>
+          -->
 
           <div class="row base_800">
             <div class="col-md-7">
@@ -826,113 +826,67 @@
         <div class="step necessities">
           <p>Quais as necessidades da escola?</p>
           
-          <div class="base_800">
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>atividades esportivas</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_sport" placeholder="quais modalidades? ex.: futebol, judô">
-                </div>
-              </div>
+
+          <div class="row base_800">
+            
+            <div class="col-md-6">
+              <input type="checkbox" name="need_sport">
+              <label>atividades esportivas</label>
             </div>
             
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>atividades culturais e artisticas</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_culture" placeholder="quais atividades? ex.: música, teatro">
-                </div>
-              </div>
+            <div class="col-md-6">
+              <input type="checkbox" name="need_culture">
+              <label>atividades culturais e artisticas</label>
+            </div>
+          </div>
+            
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="need_monitoring">
+              <label>monitoria e reforço</label>
             </div>
             
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>monitoria e reforço</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_monitoring" placeholder="quais disciplinas? ex.: matemática, português">
-                </div>
-              </div>
+            <div class="col-md-6">
+              <input type="checkbox" name="">
+              <label>reparos e instalações</label>
+            </div>
+          </div>
+
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="need_courses">
+              <label>palestras e cursos</label>
             </div>
             
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>reparos e instalações</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_repairs" placeholder="quais especialidades? ex.: pintura, elétrica">
-                </div>
-              </div>
+            <div class="col-md-6">
+              <input type="checkbox" name="need_health">
+              <label>saúde e alimentação</label>
+            </div>
+          </div>
+            
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="need_psycho">
+              <label>suporte psicopedagógico</label>
             </div>
             
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>palestras e cursos</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_courses" placeholder="quais temas? ex.: tema 1, tema 2">
-                </div>
-              </div>
+            <div class="col-md-6">
+              <input type="checkbox" name="need_donations">
+              <label>patrocínio e doações</label>
             </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>saúde e alimentação</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_health" placeholder="quais modalidades? ex.: modalidade 1, modalidade 2">
-                </div>
-              </div>
+          </div>
+
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="need_others">
+              <label>outras atividades</label>
             </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>suporte psicopedagógico</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_psycho" placeholder="quais suportes? ex.: acompanhamento, avaliação">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>patrocínio e doações</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_donations" placeholder="que tipo de doações? ex.: material didático, móveis">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>outras atividades</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="need_others" placeholder="que tipo de atividades? ex.: atividade 1, atividade 2">
-                </div>
-              </div>
+          </div>
+
+          <div class="row base_800">
+            <div class="col-md-12">
+              <label>detalhe as suas habilidades</label>
+              <input type="text" name="need_detail" placeholder="ex.: judô, pintura, matemática, acompanhamento pedagógico" style="min-width: 100%"></textarea>
             </div>
           </div>
         </div>
