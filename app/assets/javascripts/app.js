@@ -27,7 +27,7 @@
     stylizeRange();
 
     initTab({
-      formPriority : document.getElementById('voluntary_from')
+      formPriority : document.getElementById('voluntary_form')
     });
 
     // scroll to...

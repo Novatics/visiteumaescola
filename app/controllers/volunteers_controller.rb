@@ -19,6 +19,7 @@ class VolunteersController < ApplicationController
                                   skill_psycho: params[:skill_psycho],
                                   skill_donations: params[:skill_donations],
                                   skill_others: params[:skill_others],
+                                  skill_detail: params[:skill_detail],
                                   preference_kid: params[:preference_kid],
                                   preference_teenager: params[:preference_teenager],
                                   preference_adult: params[:preference_adult],

@@ -3,8 +3,8 @@
         <%= image_tag "logo_header.png", :class => "visite_logo" %>
         <div class="menu clear">
           <div class="buttons">
-            <a href="#register" data-form-action="voluntary_from">posso ajudar!</a>
-            <a href="#register" data-form-action="school_from">cadastrar escola</a>
+            <a href="#register" data-form-action="voluntary_form">posso ajudar!</a>
+            <a href="#register" data-form-action="school_form">cadastrar escola</a>
           </div>
 
           <ul>
@@ -24,8 +24,8 @@
       <p class="last_legend">Porque uma boa educação depende de <b>todos nós.</b></p>
 
       <div class="buttons">
-        <a href="#register" data-form-action="voluntary_from">posso ajudar!</a>
-        <a href="#register" data-form-action="school_from">cadastrar escola</a>
+        <a href="#register" data-form-action="voluntary_form">posso ajudar!</a>
+        <a href="#register" data-form-action="school_form">cadastrar escola</a>
       </div>
     </section>
 
@@ -216,7 +216,7 @@
       <a id="l_register" name="register"></a>
 
       <!-- Formulário do voluntário -->
-      <form id="voluntary_from" name="voluntary" class="steps_container checkboxes" data-success="O voluntário foi cadastrado com sucesso!">
+      <form id="voluntary_form" name="voluntary" class="steps_container checkboxes" data-success="O voluntário foi cadastrado com sucesso!">
         <header>
           <div class="steps_menu clear">
             <span data-tab="personally">Dados pessoais</span>
@@ -266,36 +266,7 @@
               <input type="text" name="city" placeholder="Cidade" required>
             </div>
             <div class="col-md-4">
-              <select name="state" placeholder="UF" required>
-                <option value="">UF</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espirito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-              </select>
+              <%= select_tag :state, options_for_select(unidades_federativas), required: true, include_blank: 'UF', placeholder: 'UF' %>
             </div>
             
           </div>
@@ -304,119 +275,72 @@
         <div class="step skills">
           <p>Quais habilidades você pode disponibilizar para as escolas?</p>
           
-          <div class="base_800">
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>atividades esportivas</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_sport" placeholder="quais modalidades? ex.: futebol, judô">
-                </div>
-              </div>
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_sport">
+              <label>atividades esportivas</label>
             </div>
             
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>atividades culturais e artisticas</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_culture" placeholder="quais atividades? ex.: música, teatro">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>monitoria e reforço</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_monitoring" placeholder="quais disciplinas? ex.: matemática, história">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>reparos e instalações</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_repairs" placeholder="quais especialidades? ex.: pintura, elétrica">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>palestras e cursos</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_courses" placeholder="quais temas? ex.: tema 1, tema 2">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>saúde e alimentação</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_health" placeholder="quais modalidades? ex.: modalidade 1, modalidade 2">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>suporte psicopedagógico</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_psycho" placeholder="quais suportes? ex.: acompanhamento, avaliação">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>patrocínio e doações</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_donations" placeholder="que tipo de doações? ex.: material didático, móveis">
-                </div>
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="checkgroup clear">
-                <div class="check">
-                  <input type="checkbox" name="">
-                  <label>outras atividades</label>
-                </div>
-                <div class="text">
-                  <input type="text" name="skill_others" placeholder="que tipo de atividades? ex.: atividade 1, atividade 2">
-                </div>
-              </div>
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_culture">
+              <label>atividades culturais e artisticas</label>
             </div>
           </div>
+          
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_monitoring">
+              <label>monitoria e reforço</label>
+            </div>
+            
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_repairs">
+              <label>reparos e instalações</label>
+            </div>
+          </div>
+            
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_courses">
+              <label>palestras e cursos</label>
+            </div>
+            
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_health">
+              <label>saúde e alimentação</label>
+            </div>
+          </div>
+
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_psycho">
+              <label>suporte psicopedagógico</label>
+            </div>
+            
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_donations">
+              <label>patrocínio e doações</label>
+            </div>
+          </div>
+
+          <div class="row base_800">
+            <div class="col-md-6">
+              <input type="checkbox" name="skill_others">
+              <label>outras atividades</label>
+            </div>
+          </div>
+
+          <div class="row base_800">
+            <div class="col-md-12">
+              <label>detalhe as suas habilidades</label>
+              <input type="text" name="skill_detail" placeholder="ex.: judô, pintura, matemática, acompanhamento pedagógico" style="min-width: 100%"></textarea>
+            </div>
+          </div>
+
         </div>
 
         <div class="step preferences">
-          <p>Qual o tipo de público que você tem preferência ao visitar uma escola?</p>
+          <p>Você gostaria de definir um público de preferência ao visitar uma escola?</p>
           
           <div class="row base_800">
             <div class="col-md-4">
@@ -480,8 +404,8 @@
           <p>A partir do seu endereço cadastrado, qual a distância máxima de uma escola que você pode visitar?</p>
           <div class="range">
             <span class="range_limit">0 km</span>
-            <input type="range" name="points" min="0" max="120" class="input_range">
-            <span class="range_limit">120km</span>
+            <input type="range" name="points" min="0" max="50" class="input_range">
+            <span class="range_limit">50km</span>
             <div class="range_result">
               <span>0</span>km
             </div>
@@ -590,7 +514,7 @@
       </form>
 
       <!-- Formulário da escola -->
-      <form id="school_from" name="school" class="steps_container checkboxes" data-success="Sua escola foi cadastrada com sucesso!">
+      <form id="school_form" name="school" class="steps_container checkboxes" data-success="Sua escola foi cadastrada com sucesso!">
         <header>
           <div class="steps_menu clear">
             <span data-tab="basic_data">Dados da escola</span>
@@ -640,36 +564,7 @@
               <input type="text" name="city" placeholder="Cidade" required>
             </div>
             <div class="col-md-4">
-              <select name="state" placeholder="UF da escola" required>
-                <option value="">UF</option>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espirito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-              </select>
+              <%= select_tag :state, options_for_select(unidades_federativas), required: true, include_blank: 'UF da escola', placeholder: 'UF' %>
             </div>
           </div>
 

@@ -166,40 +166,41 @@ ActiveRecord::Schema.define(version: 20160621034110) do
   add_index "volunteer_profiles", ["user_id"], name: "index_volunteer_profiles_on_user_id", using: :btree
 
   create_table "volunteers", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "cellphone"
+    t.string   "name",                                        null: false
+    t.string   "email",                                       null: false
+    t.string   "cellphone",                                   null: false
     t.string   "phone"
     t.string   "state"
-    t.string   "city"
+    t.string   "city",                                        null: false
     t.string   "neighbourhood"
     t.string   "address"
     t.string   "number"
-    t.string   "zipcode"
-    t.string   "skill_sport"
-    t.string   "skill_culture"
-    t.string   "skill_monitoring"
-    t.string   "skill_repairs"
-    t.string   "skill_courses"
-    t.string   "skill_health"
-    t.string   "skill_psycho"
-    t.string   "skill_donations"
-    t.string   "skill_others"
-    t.boolean  "preference_kid"
-    t.boolean  "preference_teenager"
-    t.boolean  "preference_adult"
-    t.boolean  "preference_elderly"
-    t.boolean  "preference_deaf"
-    t.boolean  "preference_blind"
-    t.boolean  "preference_disable"
-    t.boolean  "preference_physical_disable"
-    t.boolean  "preference_teacher"
-    t.boolean  "preference_employee"
-    t.boolean  "preference_family"
-    t.boolean  "preference_baby"
+    t.string   "zipcode",                                     null: false
+    t.boolean  "skill_sport",                 default: false
+    t.boolean  "skill_culture",               default: false
+    t.boolean  "skill_monitoring",            default: false
+    t.boolean  "skill_repairs",               default: false
+    t.boolean  "skill_courses",               default: false
+    t.boolean  "skill_health",                default: false
+    t.boolean  "skill_psycho",                default: false
+    t.boolean  "skill_donations",             default: false
+    t.boolean  "skill_others",                default: false
+    t.string   "skill_detail"
+    t.boolean  "preference_kid",              default: false
+    t.boolean  "preference_teenager",         default: false
+    t.boolean  "preference_adult",            default: false
+    t.boolean  "preference_elderly",          default: false
+    t.boolean  "preference_deaf",             default: false
+    t.boolean  "preference_blind",            default: false
+    t.boolean  "preference_disable",          default: false
+    t.boolean  "preference_physical_disable", default: false
+    t.boolean  "preference_teacher",          default: false
+    t.boolean  "preference_employee",         default: false
+    t.boolean  "preference_family",           default: false
+    t.boolean  "preference_baby",             default: false
     t.integer  "points"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   add_foreign_key "school_profiles", "users"
